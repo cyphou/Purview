@@ -1,35 +1,35 @@
-# Microsoft Purview Data Governance — Tenant Inventory & Gap Analysis
+# 📊 Microsoft Purview Data Governance — Tenant Inventory & Gap Analysis
 
-**Account**: `pdedemopurv` | **Region**: West US 2 | **SKU**: Standard  
-**Tenant**: `2bfad6b9-88f6-4129-a60f-457babf01498` | **Subscription**: ME-MngEnvMCAP965390-pidoudet-1  
-**Date**: May 4, 2026 (Sprints 1-5 executed)
+**🌐 Account**: `pdedemopurv` | **📍 Region**: West US 2 | **💳 SKU**: Standard  
+**🏢 Tenant**: `2bfad6b9-88f6-4129-a60f-457babf01498` | **📎 Subscription**: ME-MngEnvMCAP965390-pidoudet-1  
+**📅 Date**: May 4, 2026 (Sprints 1-5 executed)
 
 ---
 
-## 0. UNIFIED CATALOG — CURRENT STATE (Sprint 5)
+## 🎯 0. UNIFIED CATALOG — CURRENT STATE (Sprint 5)
 
-### Domain Hierarchy (16 domains, no root wrapper)
+### 🏗️ Domain Hierarchy (16 domains, no root wrapper)
 
 ```
-Finance and ESG [LoB] (da176475)
+💰 Finance and ESG [LoB] (da176475)
 ├── Accounting and Reporting [DataDomain] (2e6172a3) — 7 terms
 ├── Treasury and Risk [DataDomain] (3b41ca19) — 4 terms
 └── ESG and Sustainability [DataDomain] (897ce3a4) — 6 terms
-Customer and Sales [LoB] (f1b1d5fe)
+🤝 Customer and Sales [LoB] (f1b1d5fe)
 ├── CRM and Customer Data [DataDomain] (59a9c793) — 6 terms
 └── Commercial Analytics [DataDomain] (9499d5ed) — 5 terms
-HR and People [LoB] (f64840cf)
+👥 HR and People [LoB] (f64840cf)
 ├── Talent Management [DataDomain] (ce3259a5) — 5 terms
 └── Workforce Analytics [DataDomain] (4aa514cd) — 5 terms
-Operations and Industrial [LoB] (84f0ee4c)
+⚙️ Operations and Industrial [LoB] (84f0ee4c)
 ├── Industrial Assets [DataDomain] (2c339176) — 7 terms
 └── Supply Chain and Logistics [DataDomain] (77cff024) — 5 terms
-Technology and Data Platform [LoB] (7f5695d1)
+💻 Technology and Data Platform [LoB] (7f5695d1)
 ├── Data Engineering [DataDomain] (8e077509) — 5 terms
 └── BI and Analytics [DataDomain] (68219526) — 5 terms
 ```
 
-### Glossary Terms (75 UC terms with owner/steward/CDO contacts)
+### 📖 Glossary Terms (75 UC terms with owner/steward/CDO contacts)
 
 60 sub-domain terms (Sprint 5) + 15 LoB umbrella terms (Sprint UC-E) so every LoB root tile shows first-class entries (3 each):
 - **Finance and ESG**: Enterprise Financial KPI (EFK), ESG Disclosure Metric (ESG, CSRD), Financial Reporting Period (FRP)
@@ -40,7 +40,7 @@ Technology and Data Platform [LoB] (7f5695d1)
 
 All 75 terms are Published, each assigned to its parent domain with contacts for owner, steward, and CDO.
 
-### Sprint UC-F: DP→Term Bulk Linking (39 relationships)
+### 🔗 Sprint UC-F: DP→Term Bulk Linking (39 relationships)
 
 Discovered the working REST endpoint for DP→Term relationships:
 - `POST /datagovernance/catalog/dataproducts/{id}/relationships?entityType=Term&api-version=2026-03-20-preview`
@@ -63,7 +63,7 @@ Term counts per DP after bulk attach (`attach_terms_to_dps.ps1`):
 
 Result: each term attached now shows the DP under its **Related → Data products** panel; each DP shows its terms in its **Terms** section. "Market Segment" was the only term in the planned mapping that didn't exist (one of the 60 sub-domain terms was renamed at creation).
 
-### Sprint UC-G: Custom Metadata via REST (3 groups, 11 named attributes)
+### 🏷️ Sprint UC-G: Custom Metadata via REST (3 groups, 11 named attributes)
 
 **Breakthrough**: discovered `POST /datagovernance/catalog/customMetadata?api-version=2026-03-20-preview` accepts schema definitions WITH preserved attribute names (the old `/attributes` endpoint silently overwrote `name` with a GUID — see Sprint UC-D). This is the modern UC equivalent of "Custom attributes" / "Managed attributes".
 
@@ -94,7 +94,7 @@ Created groups (all Published, scope = all domains, all DP types):
 
 **Still portal-only**: applying VALUES to a specific DP. Tested PUT /dataproducts/{id} with `customMetadata: [...]` payload — HTTP 200 but value silently dropped on read-back. Same finding as Sprint UC-D for the old endpoint. Per-DP value entry remains a manual portal step.
 
-### Sprint UC-H: Wire the Documented Relationship APIs (32 relationships)
+### 🔄 Sprint UC-H: Wire the Documented Relationship APIs (32 relationships)
 
 After reviewing the official UC REST surface (8 operation groups, doc updated 2026-04-24), exercised the `Add Related Entity` / `Create Relationship` endpoints we hadn't used.
 
@@ -121,7 +121,7 @@ Part 2 — CDE-Term (15): each CDE now points to its conceptual term (populates 
 
 Part 3 — DP↔CDE: blocked both directions (REST limit, see table above). **Sprint UC-I unlocks the column-instance bridge below.**
 
-### Sprint UC-I: CriticalDataColumn — Bridging CDEs to Data Assets (15 CDCs, 15 CDE→CDC links)
+### 🏛️ Sprint UC-I: CriticalDataColumn — Bridging CDEs to Data Assets (15 CDCs, 15 CDE→CDC links)
 
 `CriticalDataColumn` (CDC) is the column-instance entity that materializes a CDE concept on a real `DataAsset` column. Created 1 CDC per CDE (15 total) via `sprint_uc_i_critical_data_columns.ps1`, then linked each CDE → its CDC.
 
@@ -169,7 +169,7 @@ So the **DP→CDE bridge** sought in UC-H Part 3 still cannot be created end-to-
 
 Result: each CDE page now shows its column instance under **Critical data columns**, and each CDC page shows its parent CDE. The 30 CDEs that were originally created with broken Atlas-asset references were cleaned up by first unlinking each CDE→CDC relationship (`DELETE /criticalDataColumns/{id}/relationships?entityType=CriticalDataElement&entityId=…` → 204) then deleting the CDC.
 
-### Sprint UC-J: Fake Data Quality (custom metadata + Atlas classifications)
+### 🟢🟡🟠 Sprint UC-J: Fake Data Quality (custom metadata + Atlas classifications)
 
 Real DQ scoring requires the Spark scan service (managed identity, profiling, rules, scan run). The DQ REST surface in this account is **read-only**: the only routable path is `GET /datagovernance/quality/scores?filterId={id}` which returns `{"scores":[],"continuationToken":null}` until a scan executes (the service ignores `api-version`; all `POST/PUT /scores`, `/jobs`, `/rules`, `/profiles`, `/connections` etc. return 404). To still demonstrate DQ governance over assets, we used two REST-doable workarounds:
 
@@ -179,13 +179,13 @@ Real DQ scoring requires the Spark scan service (managed identity, profiling, ru
 
 | Tier | Atlas typeName | Asset count | Examples |
 |---|---|---|---|
-| Gold | `DQ_Gold` | 7 | Finance Report, FSI CCO Dashboard, fact_sale, dimension_customer, Purview Hub, wwilakehouse-DirectLake |
-| Silver | `DQ_Silver` | 6 | dimension_date, dimension_city, aggregate_sale_by_date_city, aggregate_sale_by_date_employee, exec_requests_history, fact_sale (1) |
-| Bronze | `DQ_Bronze` | 72 | everything else (default) |
+| 🟢 Gold | `DQ_Gold` | 7 | Finance Report, FSI CCO Dashboard, fact_sale, dimension_customer, Purview Hub, wwilakehouse-DirectLake |
+| 🟡 Silver | `DQ_Silver` | 6 | dimension_date, dimension_city, aggregate_sale_by_date_city, aggregate_sale_by_date_employee, exec_requests_history, fact_sale (1) |
+| 🟠 Bronze | `DQ_Bronze` | 72 | everything else (default) |
 
 These chips show in the Data Map asset view and in lineage. Script: `sprint_uc_j_fake_data_quality.ps1` (idempotent — re-runs PUT the customMetadata group and skip already-classified entities).
 
-### Data Products (6 Published)
+### 📦 Data Products (6 Published)
 
 | Data Product | Domain | Owner | ID |
 |-------------|--------|-------|-----|
@@ -196,7 +196,7 @@ These chips show in the Data Map asset view and in lineage. Script: `sprint_uc_j
 | Operational Performance Hub | Operations and Industrial | ops.owner | `4302076b` |
 | Data Platform Health Monitor | Technology and Data Platform | tech.owner | `2493e522` |
 
-### Business Features (Sprint 5d) — OKRs, CDEs, Custom Attributes
+### 🎯 Business Features (Sprint 5d) — OKRs, CDEs, Custom Attributes
 
 **5 Objectives (OKRs) Published, one per LoB**, each with 3 Key Results (15 KRs total):
 
@@ -218,13 +218,13 @@ These chips show in the Data Map asset view and in lineage. Script: `sprint_uc_j
 **Custom Attributes** (10 portal-defined, no REST-creatable replacements possible — see Sprint D below):
 - Portal-only attributes: Report Type, Technology, Reporting type, External Usage, Name (x2), Description (x2), Calculation Rule (x2). The 10 LoB-specific attributes attempted in Sprint 5d (Reporting Pillar, Materiality Tier, Channel, Consent Status, Confidentiality Class, Workforce Segment, Site Code, Criticality Class, Certification Level, Refresh Frequency) were **rolled back in Sprint D** — see API limitation note below.
 
-### Ghost Entries (eventual consistency lag)
+### 👻 Ghost Entries (eventual consistency lag)
 - 22 old Atlas-created domains still appear in UC list (Atlas GET returns 404 — truly deleted)
 - 4 old data products still appear (Atlas GET returns 404 — truly deleted)
 - 8 migrated terms from old Atlas glossaries still appear
 - These should self-resolve; if persistent, requires support ticket
 
-### Known API Limitations Discovered
+### ⚠️ Known API Limitations Discovered
 - **UC term → asset linking**: Not supported via REST API (`2026-03-20-preview`). UC terms are not Atlas entities; Atlas `assignedEntities` endpoint returns 404. Must use portal.
 - **Published object deletion**: Must PUT `status=Draft` first, then DELETE.
 - **Domain PUT requires `id`**: Body must include `id` matching URL parameter.
@@ -232,18 +232,18 @@ These chips show in the Data Map asset view and in lineage. Script: `sprint_uc_j
 - **Data product POST requires `type`**: Must include `type: "Dataset"` field.
 - **PATCH not supported**: Returns MethodNotAllowed on all UC endpoints.
 
-### Working Business-Feature APIs (Sprint 5d Discoveries)
+### ✅ Working Business-Feature APIs (Sprint 5d Discoveries)
 - **Objectives (OKRs)**: `POST /datagovernance/catalog/objectives` with body `{ definition, domain, targetDate, contacts, status: "Draft" }`. Publish via `PUT /objectives/{id}` with full body + `status: "Published"`. Sub-resource: `POST /objectives/{id}/keyResults` with `{ definition, domainId, progress, goal, max, status: "OnTrack" }`.
 - **Critical Data Elements**: `POST /datagovernance/catalog/criticalDataElements` with `{ name, description, dataType, domain, contacts, status: "Draft" }`. Publish via PUT. Note: CDEs cannot be linked directly to data products via REST (`entityType` must be `DataProduct` or `CriticalDataColumn`); CDEs link to columns, not DPs.
 - **Custom Attributes**: `PUT /datagovernance/catalog/attributes/{newGuid}` (POST returns 405) with `{ id, name, description, fieldType, defaultValue, domain, isOptional, status: "Published" }`.
 - **Data Product relationships**: `POST /datagovernance/catalog/dataproducts/{dpId}/relationships?entityType=DataAsset|Term|CriticalDataColumn` with body `{ entityId }` returns 200.
 
-### Sprint 5e — Data Product Enrichment + DQ Discovery
+### 📝 Sprint 5e — Data Product Enrichment + DQ Discovery
 - **DP enrichment via PUT**: Supported writable fields are `description`, `businessUse`, `termsOfUse[]` (`{name,url}`), `documentation[]` (`{name,url}`), `endorsed`, `contacts`. The portal-visible fields **`audience`**, **`useCases`**, **`updateFrequency`**, **`activeSubscribers`** are NOT accepted by the `2026-03-20-preview` PUT (audience returns enum-conversion errors with no public enum docs; the others return 200 but are not persisted) — these appear to be portal-only or pending GA on a newer API version.
 - **All 6 LoB data products enriched** with rich `businessUse`, 1-2 `termsOfUse` policy links, 2-3 `documentation` links, and `endorsed=true`.
 - **Data Quality**: The DQ service endpoints (`/datagovernance/dataquality/*`, `/datagovernance/quality/*`, `/datagovernance/health/dataquality/*`) all return 404 on this account across `2023-10-01-preview`, `2024-02-01-preview`, and `2026-03-20-preview`. The "Data quality score" tile on a DP requires the **separately billed Purview Data Quality feature** to be enabled, plus profiling jobs and rules to be published via the portal. There is no REST path to inject a synthetic DQ score on a DP.
 
-### Sprint 6 — Operating Model: Cross-Domain Business Processes
+### 🔄 Sprint 6 — Operating Model: Cross-Domain Business Processes
 5 `Purview_BusinessProcess` entities created via Atlas, each linked to its owning `Purview_DataDomain` (`represents`) and the Application Services that implement it (`isImplementedBy_ApplicationService`):
 
 | Business Process | Domain | Implemented by | GUID |
@@ -256,12 +256,12 @@ These chips show in the Data Map asset view and in lineage. Script: `sprint_uc_j
 
 **API**: `POST /catalog/api/atlas/v2/entity` with `typeName=Purview_BusinessProcess`, `attributes={qualifiedName, name, description}`, `relationshipAttributes={represents: {guid, typeName: "Purview_DataDomain"}, isImplementedBy_ApplicationService: [{guid, typeName}]}`. Note: `isImplementedBy_ApplicationService` is heterogeneous — accepts both `Purview_ApplicationService` and `SAP application service` typeNames in the same array.
 
-### Sprint UC-A/B/C — Term Acronyms, OKR Progress, DP→BP Probe
+### 🏷️ Sprint UC-A/B/C — Term Acronyms, OKR Progress, DP→BP Probe
 - **A.4 — 30 UC terms tagged with acronyms** via `PUT /terms/{id}` (full body required including id, name, status, domain, description, contacts, acronyms[]). Examples: `OEE`, `MTBF`, `EBITDA`, `Net Promoter Score`→NPS, `Customer Lifetime Value`→[CLV, LTV], `Active Users`→[MAU, DAU], `Carbon Footprint`→CO2e, `CSRD Compliance`→CSRD, `Headcount`→HC, etc.
 - **C.1 — 12 KRs updated with realistic mid-Q2 progress** (PUT `/objectives/{id}/keyResults/{krId}` with `progress`, `goal`, `max`, `status`). Status mix: 4 OnTrack, 7 AtRisk, 1 zero-goal special-case (TRIR=0). 3 missing KRs added (`100% manager adoption`, `-30% ticket resolution time`, `MTTD <2 days`) — Sprint 5d had only created 12/15.
 - **B.2 — DP → BusinessProcess linking BLOCKED**: tested `entityType` values `BusinessProcess`, `Purview_BusinessProcess`, `Process`, `Asset` against `POST /dataproducts/{id}/relationships?entityType=...` — all return HTTP 400. The DP relationships endpoint only accepts `DataAsset`, `Term`, `CriticalDataColumn` (confirmed in Sprint 5c). Cross-linking UC DPs to Atlas BusinessProcesses is **not currently supported via REST**; portal Lineage view may show an indirect link via shared assets.
 
-### Sprint UC-D — Custom Attribute Names + Values (BLOCKED)
+### 🚫 Sprint UC-D — Custom Attribute Names + Values (BLOCKED)
 Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading to **rollback of the 10 Sprint 5d LoB attributes**:
 1. **Attribute display name is not REST-settable**. PUT `/attributes/{newGuid}` accepts the body but silently overwrites the `name` field with a server-generated GUID. The actual `name` returned by GET is never the string passed in the body. This is true for both PUT-with-id-in-body and PUT-without-id-in-body. POST returns 405. Result: any attribute created via REST appears in the portal with a GUID label — unusable.
 2. **Attribute values cannot be applied to DPs (or any UC entity) via REST**. Tested `attributes`, `customAttributes`, `additionalAttributes`, `metadata`, `tags`, `properties` as fields in the DP PUT body — all return HTTP 200 but are silently dropped on read-back. The portal must be used to assign attribute values to entities.
@@ -270,9 +270,9 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 
 ---
 
-## 1. CURRENT STATE INVENTORY
+## 🗃️ 1. CURRENT STATE INVENTORY
 
-### 1.1 Collections (25 collections)
+### 🏢 1.1 Collections (25 collections)
 
 | Code | Friendly Name | Purpose |
 |------|--------------|---------|
@@ -309,9 +309,9 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 | kxwjyq | Domain Global | Global governance domain |
 | phakjy | Global 1 | Global collection |
 
-### 1.2 Catalog Assets — 9,541 Total
+### 📊 1.2 Catalog Assets — 9,541 Total
 
-#### By Entity Type (Top 20)
+#### 📁 By Entity Type (Top 20)
 
 | Entity Type | Count | % |
 |------------|-------|---|
@@ -336,7 +336,7 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 | aws_s3_v2_object | 32 | 0.3% |
 | azure_blob_container | 29 | 0.3% |
 
-#### By Collection (asset distribution)
+#### 📂 By Collection (asset distribution)
 
 | Collection | Assets | Share |
 |-----------|--------|-------|
@@ -353,7 +353,7 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 | bpnc43 (Salesforce) | 2 | <0.1% |
 | oktkz3 (Legacy RC) | 1 | <0.1% |
 
-### 1.3 Glossary — 6 Glossaries, 113 Terms Total
+### 📖 1.3 Glossary — 6 Glossaries, 113 Terms Total
 
 | Glossary | Terms | Details |
 |----------|-------|---------|
@@ -364,7 +364,7 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 | **Customer** | 20 | Original 7 + Sprint 3: NPS, Churn Rate, ARPU, CLV, Customer Segment, Lead, Opportunity, Win Rate, Sales Pipeline, Customer Onboarding, Support Ticket, Resolution Time, CSAT |
 | **TTE Glossary (old portal)** | 3 | Maintenance Notification, Maintenance Plan, Notification Number |
 
-### 1.4 Classifications Applied
+### 🏷️ 1.4 Classifications Applied
 
 | Classification | Assets Tagged |
 |---------------|--------------|
@@ -382,7 +382,7 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 
 **Custom classifications created**: `Custom_French_Phone`, `Complaints Type`, `U.K. Phone`
 
-### 1.5 Entity Type Definitions — 731 Total
+### 🧩 1.5 Entity Type Definitions — 731 Total
 
 | Service | Type Count |
 |---------|-----------|
@@ -401,39 +401,39 @@ Deep probe of the `/attributes` endpoint revealed two hard REST limits, leading 
 | DB2 | 13 |
 | Amazon Redshift | 13 |
 
-### 1.6 Policies — 32 Collection-Level Metadata Policies
+### 🔒 1.6 Policies — 32 Collection-Level Metadata Policies
 
 All collections have associated metadata policies for access control.
 
-### 1.7 Connectors / Sources Detected (Multi-Cloud)
+### 🔌 1.7 Connectors / Sources Detected (Multi-Cloud)
 
-- **Azure**: ADLS Gen2, Azure SQL, Azure Blob, Fabric (Lakehouse, Warehouse, Notebooks, Pipelines, KQL DB, ML)
-- **Snowflake**: Tables, views, schemas, stored procedures
-- **AWS**: S3, Redshift
-- **GCP**: Collection exists (GCP)
-- **Dynamics/Dataverse**: 347 tables scanned
-- **Salesforce**: 2 assets
-- **On-Premises**: SQL Server tables, PostgreSQL (tables + views)
-- **Power BI**: Datasets (204), Reports (133), Dashboards (22), Dataflows (12)
-- **ADF**: Copy activities, pipelines, dataflow activities
+- **☁️ Azure**: ADLS Gen2, Azure SQL, Azure Blob, Fabric (Lakehouse, Warehouse, Notebooks, Pipelines, KQL DB, ML)
+- **❄️ Snowflake**: Tables, views, schemas, stored procedures
+- **🟧 AWS**: S3, Redshift
+- **🔵 GCP**: Collection exists (GCP)
+- **🟣 Dynamics/Dataverse**: 347 tables scanned
+- **☁️ Salesforce**: 2 assets
+- **🏠 On-Premises**: SQL Server tables, PostgreSQL (tables + views)
+- **📊 Power BI**: Datasets (204), Reports (133), Dashboards (22), Dataflows (12)
+- **🔄 ADF**: Copy activities, pipelines, dataflow activities
 
-### 1.8 Features NOT Accessible via REST API (403/401)
+### 🚫 1.8 Features NOT Accessible via REST API (403/401)
 
 | Feature | Status | Notes |
 |---------|--------|-------|
-| Data Sources (Scan API) | 403 Forbidden | Needs Data Source Administrator role |
-| Scan Rule Sets | 403 Forbidden | Needs Scan admin |
-| Integration Runtimes | 403 Forbidden | Needs Purview admin |
-| Managed Private Endpoints | 403 Forbidden | Needs network admin |
-| Governance Domains (new API) | 401 Unauthorized | New Data Governance API endpoints not accessible with `purview.azure.net` token scope |
-| Data Quality Rules (new API) | 401 Unauthorized | New Data Governance feature |
-| Business Context / OKRs (new API) | 401 Unauthorized | New Data Governance feature |
+| Data Sources (Scan API) | 🚫 403 Forbidden | Needs Data Source Administrator role |
+| Scan Rule Sets | 🚫 403 Forbidden | Needs Scan admin |
+| Integration Runtimes | 🚫 403 Forbidden | Needs Purview admin |
+| Managed Private Endpoints | 🚫 403 Forbidden | Needs network admin |
+| Governance Domains (new API) | 🔒 401 Unauthorized | New Data Governance API endpoints not accessible with `purview.azure.net` token scope |
+| Data Quality Rules (new API) | 🔒 401 Unauthorized | New Data Governance feature |
+| Business Context / OKRs (new API) | 🔒 401 Unauthorized | New Data Governance feature |
 
 > **Note**: Governance entities (Application Services, Data Products) ARE accessible via the Atlas v2 catalog/search API. Only the new dedicated Data Governance REST endpoints are blocked.
 
-### 1.9 Governance Entities — Purview Business Assets (20 total)
+### 🏢 1.9 Governance Entities — Purview Business Assets (20 total)
 
-#### Application Services (12 in RC branch + 6 SAP)
+#### ⚙️ Application Services (12 in RC branch + 6 SAP)
 
 **RC Branch Assets** (collection: `jtecfo` — RC branch assets):
 
@@ -465,7 +465,7 @@ All collections have associated metadata policies for access control.
 | SAP O02 Polymers Supply supply chain import csv v2 | 6zun08 |
 | SAP RC collection of assets | oktkz3 |
 
-#### Data Products (2)
+#### 📦 Data Products (2)
 
 **Test / Deprecated Products** (from initial setup):
 
@@ -485,13 +485,13 @@ All collections have associated metadata policies for access control.
 | Operational Performance Hub | Operations and Industrial | `0d633bc1-...` | Equipment OEE, maintenance KPIs, safety tracking |
 | Data Platform Health | Technology and Data Platform | `25db6129-...` | Pipeline status, data freshness, catalog completeness |
 
-#### Relationship Schema (from type definitions)
+#### 🔗 Relationship Schema (from type definitions)
 
 - **Purview_ApplicationService** can: `represents` a DataDomain, `has` Databases, `implements` BusinessProcesses, `isImplementedBy` Manual Sources, has glossary `meanings`
 - **Purview_Product** can: `represents` a DataDomain, `isGroupedBy` LineOfBusiness, `isOfferedBy` Organization, has glossary `meanings`
 - **Digital Product TDF** (custom): Same relationship schema as Purview_Product
 
-#### Missing Governance Entity Types (type exists but 0 instances)
+#### ⚠️ Missing Governance Entity Types (type exists but 0 instances)
 
 | Type | Description | Instances |
 |------|-------------|-----------|
