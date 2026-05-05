@@ -1,0 +1,7 @@
+# Sensitive — contains principal OIDs and full RBAC policy
+policy_dump.json
+demo_users.json
+sprint2_guids.json
+sprint5_domain_guids.json
+purview_inventory.json
+governance_entities_detail.json
