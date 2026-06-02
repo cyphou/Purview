@@ -101,8 +101,28 @@
 .\sprint_uc_i_critical_data_columns.ps1  # CDE→CriticalDataColumn bridge (15 CDCs)
 .\sprint_uc_j_fake_data_quality.ps1   # DQ tier classifications (Gold/Silver/Bronze)
 .\create_custom_metadata.ps1          # Custom metadata groups (3 groups, 11 attributes)
+.\complete_metadata_data_products_dq.ps1  # One-pass metadata completion + DP asset wiring + DQ API tags
 .\assign_owners.ps1                   # Owner/steward/CDO contact assignment
 .\add_purview_roles.ps1               # IAM role assignments for demo users
+```
+
+### UX demo portal (business-first live view)
+
+```powershell
+.\run_scenario_environment.ps1
+# opens scenario-ready environment on http://localhost:7071
+```
+
+What it provides:
+- KPI/catalog search for Scenario 1
+- Data Product + linked assets drilldown for Scenarios 2/3
+- Scenario readiness board (S1->S4) with live checks
+- Scenario 4 evidence loading from generated artifacts
+
+Preparation only (without starting UI):
+
+```powershell
+.\prepare_scenario_environment.ps1
 ```
 
 ---
@@ -124,6 +144,7 @@
 | `sprint_uc_h_relationships.ps1` | Term↔term + CDE↔term cross-linking |
 | `sprint_uc_i_critical_data_columns.ps1` | CriticalDataColumn entity creation & CDE bridging |
 | `sprint_uc_j_fake_data_quality.ps1` | Atlas DQ classification tiers on 85 assets |
+| `complete_metadata_data_products_dq.ps1` | One-pass DP metadata completion, DP→Asset/Term links, and DQ tagging via API |
 | `add_business_features.ps1` | OKRs, CDEs, and custom attrs in one pass |
 | `add_lob_umbrella_terms.ps1` | LoB-level umbrella glossary terms |
 | `attach_terms_to_dps.ps1` | Bulk DP→Term relationship creation |
@@ -138,6 +159,7 @@
 | `verify_and_assign_owners.ps1` | Verify + fix contact assignments |
 | `add_purview_roles.ps1` | IAM role grants for demo users |
 | `grant_pbi_workspace_access.ps1` | Power BI workspace access for demo users |
+| `scenario4_admin_adoption_evidence.ps1` | Generates scenario 4 admin/adoption evidence (roles, persona mapping, coverage snapshot) |
 | `demo_users.json` | User GUIDs for all 15 demo personas |
 | **Discovery & diagnostics** | |
 | `query_purview.ps1` | General-purpose catalog search |

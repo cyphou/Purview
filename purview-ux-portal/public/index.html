@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purview Demo Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Purview Experience Portal</p>
+        <h1>Mode scenario + exploration metier generique</h1>
+        <p class="subtitle">
+          Utilise des scenarios configures, ou navigue librement dans le catalogue pour n'importe quel cas metier.
+        </p>
+      </div>
+      <button id="refreshBtn" class="btn-primary">Actualiser les donnees</button>
+    </header>
+
+    <main class="layout">
+      <section class="card metrics" id="summaryCard">
+        <h2>Contexte rapide</h2>
+        <div id="metricsGrid" class="metrics-grid"></div>
+        <h3>Readiness scenarios</h3>
+        <div id="readinessBoard" class="readiness-board"></div>
+      </section>
+
+      <section class="card guide-panel">
+        <h2>Playbook live</h2>
+        <div class="scenario-nav" id="scenarioNav"></div>
+
+        <article class="scenario-frame">
+          <h3 id="scenarioTitle">Scenario 1 - KPI explainability</h3>
+          <p id="scenarioObjective" class="scenario-objective"></p>
+          <ul id="scenarioSteps" class="scenario-steps"></ul>
+          <p class="say-line"><strong>A dire:</strong> <span id="scenarioSay"></span></p>
+          <p class="backup-line"><strong>Backup:</strong> <span id="scenarioBackup"></span></p>
+        </article>
+      </section>
+
+      <section class="card scenario-pane">
+        <h2>Recherche catalogue</h2>
+        <form id="searchForm" class="search-form">
+          <input id="searchInput" type="text" placeholder="Ex: Profitability Net Profit Margin / Customer Master ID" required />
+          <button type="submit" class="btn-secondary">Rechercher</button>
+        </form>
+        <div id="objectFilters" class="object-filters">
+          <label><input type="checkbox" value="dataProduct" checked /> Data Products</label>
+          <label><input type="checkbox" value="dataAsset" checked /> Data Assets</label>
+          <label><input type="checkbox" value="dataQuality" checked /> Data Quality</label>
+          <label><input type="checkbox" value="businessTerm" checked /> Business Terms</label>
+          <label><input type="checkbox" value="businessDomain" checked /> Business Domains</label>
+        </div>
+        <div id="presetQueries" class="quick-queries"></div>
+        <ul id="searchResults" class="result-list"></ul>
+      </section>
+
+      <section class="card scenario-pane">
+        <h2>Explorateur Data Products</h2>
+        <div class="split">
+          <div>
+            <h3>Data Products</h3>
+            <ul id="dataProducts" class="result-list compact"></ul>
+          </div>
+          <div>
+            <h3>Assets a montrer</h3>
+            <p id="assetHint" class="hint">Selectionnez un Data Product pour voir les assets lies.</p>
+            <ul id="assetsForProduct" class="result-list compact"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card scenario-pane">
+        <h2>Navigation objet et lineage</h2>
+        <p id="selectedObjectHint" class="hint">Selectionne un resultat de recherche pour voir ses details et relations.</p>
+        <div id="selectedObjectCard" class="evidence-box">
+          <p>Aucun objet selectionne.</p>
+        </div>
+        <h3>Objets relies</h3>
+        <ul id="governedResults" class="result-list"></ul>
+        <h3>Lineage</h3>
+        <div id="lineageBox" class="evidence-box">
+          <p>Le lineage apparaitra ici pour les Data Assets.</p>
+        </div>
+      </section>
+
+      <section class="card scenario-pane">
+        <h2>Preuves et adoption</h2>
+        <p class="hint">Charge les artefacts disponibles pour afficher roles, personas et readiness go-live.</p>
+        <button id="loadEvidenceBtn" class="btn-secondary">Charger la preuve scenario 4</button>
+        <div id="evidenceBox" class="evidence-box">
+          <p>Personas cibles: cdo, financeowner, dq.lead, dpo</p>
+          <p>Fichiers attendus: docs/scenario4_admin_adoption_evidence.md et .json</p>
+        </div>
+      </section>
+    </main>
+
+    <template id="resultItemTemplate">
+      <li>
+        <div class="topline">
+          <strong class="name"></strong>
+          <span class="type-tag"></span>
+        </div>
+        <p class="desc"></p>
+      </li>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

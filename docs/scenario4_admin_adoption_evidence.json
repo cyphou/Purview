@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-06-01T20:58:00",
+  "purviewAccount": "pdedemopurv",
+  "scenarioCoverage": {
+    "scenario4": "Admin and adoption evidence generated",
+    "scenario3": "Documentation and governance supported",
+    "scenario2": "Domain and data product exploration supported",
+    "scenario1": "KPI understanding and lineage supported"
+  },
+  "catalog": {
+    "dataProducts": 15,
+    "terms": 100,
+    "objectives": 7,
+    "criticalDataElements": 19,
+    "businessDomains": 30
+  },
+  "demoUsers": [
+    {
+      "persona": "dq.lead",
+      "objectId": "f690a58b-62ba-432b-b776-75da9257f268"
+    },
+    {
+      "persona": "ops.owner",
+      "objectId": "51ad0829-6d52-4b75-9bd4-c49aa3df3413"
+    },
+    {
+      "persona": "financesteward",
+      "objectId": "619a0048-e2c0-466a-a611-a34521941024"
+    },
+    {
+      "persona": "cfo",
+      "objectId": "7d6d0d73-8eb2-4a9c-a4c8-ef6276adfdc0"
+    },
+    {
+      "persona": "cdo",
+      "objectId": "9f09a330-ba5b-4d44-9edb-66f92184558a"
+    },
+    {
+      "persona": "hr.steward",
+      "objectId": "34b84d21-4795-4625-82c0-984794cde1bb"
+    },
+    {
+      "persona": "financeowner",
+      "objectId": "e8c4054b-55fd-4783-bc2f-a1ef32f8ea7b"
+    },
+    {
+      "persona": "tech.owner",
+      "objectId": "77a408f9-0068-4659-bceb-58b93cb7b785"
+    },
+    {
+      "persona": "customer.owner",
+      "objectId": "c51caf82-91a2-4ad1-a12e-86970c20f1f8"
+    },
+    {
+      "persona": "tech.steward",
+      "objectId": "78df8308-6336-4248-9758-5b574e62fef6"
+    },
+    {
+      "persona": "dpo",
+      "objectId": "9797e797-cb3f-4c5e-b343-ceefff19a0c3"
+    },
+    {
+      "persona": "data.architect",
+      "objectId": "dfeb4020-e563-44e2-9a16-48915e85debd"
+    },
+    {
+      "persona": "customer.steward",
+      "objectId": "14d408da-9d02-4292-9a4d-98d53728f8e9"
+    },
+    {
+      "persona": "hr.owner",
+      "objectId": "e38ff89a-05f2-478b-b9da-5612656a19e9"
+    },
+    {
+      "persona": "ops.steward",
+      "objectId": "420558ee-fbb6-47f7-9ab3-d369ff7d96c7"
+    }
+  ],
+  "roles": [
+    {
+      "role": "collection-administrator",
+      "principalCount": 4,
+      "demoMemberCount": 0,
+      "demoMembers": ""
+    },
+    {
+      "role": "purview-reader",
+      "principalCount": 18,
+      "demoMemberCount": 15,
+      "demoMembers": "dq.lead, ops.owner, financesteward, cfo, cdo, hr.steward, financeowner, tech.owner, customer.owner, tech.steward, dpo, data.architect, customer.steward, hr.owner, ops.steward"
+    },
+    {
+      "role": "data-curator",
+      "principalCount": 20,
+      "demoMemberCount": 15,
+      "demoMembers": "dq.lead, ops.owner, financesteward, cfo, cdo, hr.steward, financeowner, tech.owner, customer.owner, tech.steward, dpo, data.architect, customer.steward, hr.owner, ops.steward"
+    },
+    {
+      "role": "data-source-administrator",
+      "principalCount": 4,
+      "demoMemberCount": 0,
+      "demoMembers": ""
+    },
+    {
+      "role": "workflow-administrator",
+      "principalCount": 3,
+      "demoMemberCount": 0,
+      "demoMembers": ""
+    },
+    {
+      "role": "insights-reader",
+      "principalCount": 3,
+      "demoMemberCount": 0,
+      "demoMembers": ""
+    },
+    {
+      "role": "policy-author",
+      "principalCount": 3,
+      "demoMemberCount": 0,
+      "demoMembers": ""
+    }
+  ],
+  "personaRoles": [
+    {
+      "persona": "dq.lead",
+      "objectId": "f690a58b-62ba-432b-b776-75da9257f268",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "ops.owner",
+      "objectId": "51ad0829-6d52-4b75-9bd4-c49aa3df3413",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "financesteward",
+      "objectId": "619a0048-e2c0-466a-a611-a34521941024",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "cfo",
+      "objectId": "7d6d0d73-8eb2-4a9c-a4c8-ef6276adfdc0",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "cdo",
+      "objectId": "9f09a330-ba5b-4d44-9edb-66f92184558a",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "hr.steward",
+      "objectId": "34b84d21-4795-4625-82c0-984794cde1bb",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "financeowner",
+      "objectId": "e8c4054b-55fd-4783-bc2f-a1ef32f8ea7b",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "tech.owner",
+      "objectId": "77a408f9-0068-4659-bceb-58b93cb7b785",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "customer.owner",
+      "objectId": "c51caf82-91a2-4ad1-a12e-86970c20f1f8",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "tech.steward",
+      "objectId": "78df8308-6336-4248-9758-5b574e62fef6",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "dpo",
+      "objectId": "9797e797-cb3f-4c5e-b343-ceefff19a0c3",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "data.architect",
+      "objectId": "dfeb4020-e563-44e2-9a16-48915e85debd",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "customer.steward",
+      "objectId": "14d408da-9d02-4292-9a4d-98d53728f8e9",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "hr.owner",
+      "objectId": "e38ff89a-05f2-478b-b9da-5612656a19e9",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    },
+    {
+      "persona": "ops.steward",
+      "objectId": "420558ee-fbb6-47f7-9ab3-d369ff7d96c7",
+      "roleCount": 2,
+      "roles": "data-curator, purview-reader"
+    }
+  ]
+}

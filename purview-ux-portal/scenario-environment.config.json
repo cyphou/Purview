@@ -1,0 +1,42 @@
+{
+  "scenarios": {
+    "s1": {
+      "name": "Scenario 1 - KPI explainability",
+      "requiredSearchTerms": [
+        "Profitability Net Profit Margin",
+        "Profitability Gross Profit Margin",
+        "Profitability Return on Investment"
+      ]
+    },
+    "s2": {
+      "name": "Scenario 2 - Domaine + Data Product",
+      "requiredDataProducts": [
+        "Customer 360",
+        "Executive Financial Dashboards",
+        "Workforce Analytics Dashboard"
+      ]
+    },
+    "s3": {
+      "name": "Scenario 3 - Asset gouverne",
+      "requiredSearchTerms": [
+        "Customer Master ID",
+        "Email Address",
+        "Customer Lifetime Value",
+        "GL Account Number"
+      ]
+    },
+    "s4": {
+      "name": "Scenario 4 - Roles et adoption",
+      "requiredPersonas": [
+        "cdo",
+        "financeowner",
+        "dq.lead",
+        "dpo"
+      ],
+      "requiredEvidenceFiles": [
+        "docs/scenario4_admin_adoption_evidence.md",
+        "docs/scenario4_admin_adoption_evidence.json"
+      ]
+    }
+  }
+}

@@ -16,7 +16,10 @@ $content = @{
     documentation = @(
       @{ name = "Data Dictionary"; url = "https://contoso.sharepoint.com/sites/finance-bi/Pages/DataDictionary.aspx" },
       @{ name = "Monthly Close Runbook"; url = "https://contoso.sharepoint.com/sites/finance-bi/Pages/CloseRunbook.aspx" },
-      @{ name = "Reconciliation Guide"; url = "https://contoso.sharepoint.com/sites/finance-bi/Pages/Recon.aspx" }
+      @{ name = "Reconciliation Guide"; url = "https://contoso.sharepoint.com/sites/finance-bi/Pages/Recon.aspx" },
+      @{ name = "Board Pack Template.pdf"; url = "https://contoso.sharepoint.com/sites/finance-bi/Shared%20Documents/Board-Pack-Template.pdf" },
+      @{ name = "Close Checklist.docx"; url = "https://contoso.sharepoint.com/sites/finance-bi/Shared%20Documents/Close-Checklist.docx" },
+      @{ name = "KPI Mapping.xlsx"; url = "https://contoso.sharepoint.com/sites/finance-bi/Shared%20Documents/KPI-Mapping.xlsx" }
     )
   }
   "ESG and CSRD Reporting Pack" = @{
@@ -26,7 +29,10 @@ $content = @{
     )
     documentation = @(
       @{ name = "CSRD Mapping Workbook"; url = "https://contoso.sharepoint.com/sites/sustainability/Pages/CSRD-Mapping.aspx" },
-      @{ name = "Emissions Methodology"; url = "https://contoso.sharepoint.com/sites/sustainability/Pages/EmissionsMethodology.aspx" }
+      @{ name = "Emissions Methodology"; url = "https://contoso.sharepoint.com/sites/sustainability/Pages/EmissionsMethodology.aspx" },
+      @{ name = "CSRD Evidence Pack.pdf"; url = "https://contoso.sharepoint.com/sites/sustainability/Shared%20Documents/CSRD-Evidence-Pack.pdf" },
+      @{ name = "Audit Procedure.docx"; url = "https://contoso.sharepoint.com/sites/sustainability/Shared%20Documents/Audit-Procedure.docx" },
+      @{ name = "Scope3 Factors.xlsx"; url = "https://contoso.sharepoint.com/sites/sustainability/Shared%20Documents/Scope3-Factors.xlsx" }
     )
   }
   "Customer 360" = @{
@@ -38,7 +44,10 @@ $content = @{
     documentation = @(
       @{ name = "Customer 360 Data Dictionary"; url = "https://contoso.sharepoint.com/sites/customer360/Pages/DataDictionary.aspx" },
       @{ name = "Customer Master Stewardship Guide"; url = "https://contoso.sharepoint.com/sites/customer360/Pages/Stewardship.aspx" },
-      @{ name = "Onboarding Runbook"; url = "https://contoso.sharepoint.com/sites/customer360/Pages/Onboarding.aspx" }
+      @{ name = "Onboarding Runbook"; url = "https://contoso.sharepoint.com/sites/customer360/Pages/Onboarding.aspx" },
+      @{ name = "Consent Policy Summary.pdf"; url = "https://contoso.sharepoint.com/sites/customer360/Shared%20Documents/Consent-Policy-Summary.pdf" },
+      @{ name = "Steward Playbook.docx"; url = "https://contoso.sharepoint.com/sites/customer360/Shared%20Documents/Steward-Playbook.docx" },
+      @{ name = "Segmentation Rules.xlsx"; url = "https://contoso.sharepoint.com/sites/customer360/Shared%20Documents/Segmentation-Rules.xlsx" }
     )
   }
   "Workforce Analytics Dashboard" = @{
@@ -49,7 +58,10 @@ $content = @{
     )
     documentation = @(
       @{ name = "Workforce Metrics Catalog"; url = "https://contoso.sharepoint.com/sites/people-analytics/Pages/Metrics.aspx" },
-      @{ name = "Manager Self-Service Guide"; url = "https://contoso.sharepoint.com/sites/people-analytics/Pages/MgrGuide.aspx" }
+      @{ name = "Manager Self-Service Guide"; url = "https://contoso.sharepoint.com/sites/people-analytics/Pages/MgrGuide.aspx" },
+      @{ name = "HR KPI Handbook.pdf"; url = "https://contoso.sharepoint.com/sites/people-analytics/Shared%20Documents/HR-KPI-Handbook.pdf" },
+      @{ name = "Performance Review SOP.docx"; url = "https://contoso.sharepoint.com/sites/people-analytics/Shared%20Documents/Performance-Review-SOP.docx" },
+      @{ name = "Attrition Model Inputs.xlsx"; url = "https://contoso.sharepoint.com/sites/people-analytics/Shared%20Documents/Attrition-Model-Inputs.xlsx" }
     )
   }
   "Operational Performance Hub" = @{
@@ -60,7 +72,10 @@ $content = @{
     documentation = @(
       @{ name = "Site KPI Definitions"; url = "https://contoso.sharepoint.com/sites/operations/Pages/KPIs.aspx" },
       @{ name = "Maintenance Workflow Reference"; url = "https://contoso.sharepoint.com/sites/operations/Pages/Maintenance.aspx" },
-      @{ name = "Safety Reporting Standard"; url = "https://contoso.sharepoint.com/sites/operations/Pages/Safety.aspx" }
+      @{ name = "Safety Reporting Standard"; url = "https://contoso.sharepoint.com/sites/operations/Pages/Safety.aspx" },
+      @{ name = "Plant Operating Manual.pdf"; url = "https://contoso.sharepoint.com/sites/operations/Shared%20Documents/Plant-Operating-Manual.pdf" },
+      @{ name = "Incident Escalation SOP.docx"; url = "https://contoso.sharepoint.com/sites/operations/Shared%20Documents/Incident-Escalation-SOP.docx" },
+      @{ name = "Maintenance Planning.xlsx"; url = "https://contoso.sharepoint.com/sites/operations/Shared%20Documents/Maintenance-Planning.xlsx" }
     )
   }
   "Data Platform Health Monitor" = @{
@@ -71,7 +86,10 @@ $content = @{
     documentation = @(
       @{ name = "Health Metric Definitions"; url = "https://contoso.sharepoint.com/sites/data-platform/Pages/HealthMetrics.aspx" },
       @{ name = "Certification Process"; url = "https://contoso.sharepoint.com/sites/data-platform/Pages/Certification.aspx" },
-      @{ name = "Incident Response Runbook"; url = "https://contoso.sharepoint.com/sites/data-platform/Pages/Incidents.aspx" }
+      @{ name = "Incident Response Runbook"; url = "https://contoso.sharepoint.com/sites/data-platform/Pages/Incidents.aspx" },
+      @{ name = "Platform Standards.pdf"; url = "https://contoso.sharepoint.com/sites/data-platform/Shared%20Documents/Platform-Standards.pdf" },
+      @{ name = "Certification Workflow.docx"; url = "https://contoso.sharepoint.com/sites/data-platform/Shared%20Documents/Certification-Workflow.docx" },
+      @{ name = "Freshness SLA Matrix.xlsx"; url = "https://contoso.sharepoint.com/sites/data-platform/Shared%20Documents/Freshness-SLA-Matrix.xlsx" }
     )
   }
 }
