@@ -247,7 +247,7 @@ This project reverse-engineered large parts of the **Unified Catalog REST API** 
 | Critical Data Elements | ✅ Works | Links to columns, not DPs |
 | CriticalDataColumns | ✅ Works | Bridge layer between CDEs and assets |
 | Custom Metadata (groups) | ✅ Works | Modern endpoint preserves attribute names |
-| Custom Metadata (values on entities) | ❌ Blocked | PUT accepted, values silently dropped |
+| Custom Metadata (values on entities) | ⚠️ Partial | REST PUT still drops values; **CSV bulk import (col H+) may work** — see `bulk_import_custom_attributes_csv.ps1` |
 | DP→BusinessProcess linking | ❌ Blocked | Only `DataAsset`, `Term`, `CriticalDataColumn` accepted |
 | Data Quality scores | ❌ Read-only | Requires separately billed DQ feature + scan jobs |
 | Old `/attributes` endpoint | ⚠️ Broken | Silently overwrites `name` with GUID |
@@ -267,14 +267,20 @@ This project reverse-engineered large parts of the **Unified Catalog REST API** 
 
 ---
 
-## ⚠️ Known Limitations
+## ⚠️ Known Limitations & July 2026 Status
 
-- **Ghost entries**: ~22 deleted Atlas domains + 4 old DPs still appear in UC listings due to eventual consistency lag
-- **PATCH not supported**: All UC endpoints require full-body PUT
-- **Published object deletion**: Must transition to `Draft` before DELETE
-- **Custom attribute values**: Cannot be set via REST — portal only
-- **DP↔CDE direct link**: Not supported; must route through Term or CriticalDataColumn intermediaries
-- **DQ scores**: Require the paid Purview Data Quality add-on + profiling jobs
+_Last reviewed: July 2, 2026 — see [purview_governance_inventory.md](purview_governance_inventory.md) for full analysis_
+
+| Limitation | Status |
+|-----------|--------|
+| **Ghost entries** (~22 deleted Atlas domains + 4 old DPs in UC listings) | ❌ Eventual consistency lag — self-resolve or support ticket |
+| **PATCH not supported** (all UC endpoints require full-body PUT) | ❌ No change |
+| **Published object deletion** (must transition to `Draft` first) | ❌ No change |
+| **Custom attribute values via REST** (silently dropped) | ⚠️ CSV bulk import workaround available — see `bulk_import_custom_attributes_csv.ps1` |
+| **DP↔CDE direct link** (must route through Term or CriticalDataColumn) | ❌ No change |
+| **DQ scores** (real Spark-based scoring) | ✅🆕 **Standalone + incremental DQ scans GA May 2026** — see `setup_real_dq_scans.ps1` |
+| **UC term → data asset/column linking** | ✅🆕 **Available (April 2026 Preview)** after one-time portal migration — see `enable_glossary_asset_curation.ps1` |
+| **DP → BusinessProcess linking** (returns 400) | ❌ No change |
 
 ---
 

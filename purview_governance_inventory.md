@@ -2,7 +2,65 @@
 
 **🌐 Account**: `pdedemopurv` | **📍 Region**: West US 2 | **💳 SKU**: Standard  
 **🏢 Tenant**: `2bfad6b9-88f6-4129-a60f-457babf01498` | **📎 Subscription**: ME-MngEnvMCAP965390-pidoudet-1  
-**📅 Date**: May 4, 2026 (Sprints 1-5 executed)
+**📅 Original Date**: May 4, 2026 (Sprints 1-5) | **🔄 Updated**: July 2, 2026 (API status review)
+
+---
+
+## 🆕 July 2026 — API Status Update & New Capabilities
+
+_Source: [Microsoft Purview What's New](https://learn.microsoft.com/en-us/purview/whats-new) · Checked 2026-07-02_
+
+### Limitations Status Re-Assessment
+
+| Limitation | Previous State | July 2026 State |
+|------------|---------------|-----------------|
+| **UC term → asset/column linking** | ❌ REST 404 | ✅🆕 **Available in portal (April 2026 Preview)** after one-time `glossary-terms-migrate` enablement. REST endpoint status TBD (run `enable_glossary_asset_curation.ps1` to test). |
+| **Custom attribute values via REST PUT** | ❌ Silently dropped | ❌ **Still silently dropped** — portal-only. BUT: **CSV bulk import columns H+ now accept attribute values** (new workaround via `bulk_import_custom_attributes_csv.ps1`). |
+| **Real DQ scores** | ❌ All DQ endpoints 404 | ✅🆕 **Standalone asset DQ scans + incremental scans GA (May 2026)**. Configurable thresholds also GA. Still requires portal enablement + managed identity. Run `setup_real_dq_scans.ps1` to test. |
+| **DP → BusinessProcess linking** | ❌ HTTP 400 | ❌ **No change** — not mentioned in release notes. Still portal Lineage view only. |
+| **PATCH not supported** | ❌ MethodNotAllowed | ❌ **No change** — full PUT body still required. |
+| **Custom attribute DELETE** | ❌ 405 Method Not Allowed | ❌ **No change** — only expire via portal or rename. |
+| **`audience`, `useCases`, `updateFrequency` on DPs** | ❌ Silently dropped | ⚠️ **Potentially improved** — `audience` enum values now documented in bulk import CSV spec. Test via CSV import. |
+
+### New Capabilities (direct impact on this project)
+
+#### 1. Term → Data Asset / Column Linking (April 2026 — Preview)
+- **Doc**: `unified-catalog-glossary-terms-migrate` + `unified-catalog-glossary-terms-create-manage`
+- **What changed**: A one-time migration process enables "asset curation" — after which terms can be linked to data assets, columns, and CDEs from the term's **Related tab** in the portal
+- **Prerequisite**: `Data Steward` role on the domain + `Data Reader` on the asset's collection
+- **REST status**: Unknown until tested (may still be portal-only)
+- **Script**: `enable_glossary_asset_curation.ps1` — probes the migration endpoint and bulk-links 30 terms to canonical assets if REST is unblocked
+
+#### 2. Real Data Quality Scans — GA (May 2026)
+- **Standalone data asset DQ scan** (GA May 2026) — can scan an asset without a data product
+- **Incremental DQ scan** (GA May 2026) — time-based delta scans reduce full-scan compute
+- **Configurable DQ thresholds** (GA May 2026) — rule-level and asset-level minimum scores with alerting
+- **On-premises Oracle + SQL Server** (Preview, April 2026) — on-premises DQ scanning
+- **Impact**: `sprint_uc_j_fake_data_quality.ps1` (fake Atlas classifications) can be replaced with real scores
+- **Script**: `setup_real_dq_scans.ps1` — probes all DQ endpoints, creates connections/rules/scans/thresholds
+
+#### 3. Bulk Import with Custom Attribute Columns (April 2026 — Preview)
+- **For DPs**: CSV Columns A–G = name/owners/type/audience/endorsed/description/businessUse; **Column H+ = custom attributes**
+- **For Terms**: CSV Columns A–F = name/description/owners/experts/acronyms/resources; **Column G+ = custom attributes**
+- **Key insight**: During bulk import, attribute values ARE accepted — this may be the only programmatic path around the REST silently-drops limitation
+- **Limitation**: CSV can only have 1,000 rows; import is create-only (cannot update existing entities)
+- **Script**: `bulk_import_custom_attributes_csv.ps1` — generates CSVs with all 9 attribute values per DP, probes REST upload endpoint, falls back to portal-upload instructions
+
+#### 4. Additional Governance Features (not directly blocking us)
+- **Glossary classic → UC migration** (April 2026 Preview): one-time migration from old Atlas glossary to UC terms
+- **Bulk edit glossary terms** (April 2026 Preview): edit up to 50 terms at once via portal
+- **Move terms between domains** (April 2026 Preview): batch term relocation across governance domains
+- **DQ custom rules using SQL expression** (GA March 2026): SQL-based DQ rules in addition to ADF expressions
+- **Advanced resource sets** (GA April 2026): rolled out to all customers
+- **Data observability** (Preview): new tab on DP and term pages for lineage visualization
+
+### Scripts Created for July 2026 Action Items
+
+| Script | Purpose |
+|--------|---------|
+| `enable_glossary_asset_curation.ps1` | Enable one-time migration + probe + bulk term→asset linking |
+| `setup_real_dq_scans.ps1` | Full DQ scan setup: probe → connection → rules → scans → thresholds |
+| `bulk_import_custom_attributes_csv.ps1` | Generate CSVs with custom attribute columns + probe/upload |
 
 ---
 
