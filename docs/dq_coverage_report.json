@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-06-02T10:41:27",
+  "purviewAccount": "pdedemopurv",
+  "summary": {
+    "dataProducts": 8,
+    "linkedAssets": 83,
+    "linkedTerms": 56,
+    "dqTaggedAssets": 81,
+    "dqGold": 42,
+    "dqSilver": 30,
+    "dqBronze": 9,
+    "dqMissing": 2
+  },
+  "dataProducts": [
+    {
+      "dataProduct": "Books Analytics &  Forecasting",
+      "linkedAssets": 22,
+      "linkedTerms": 7,
+      "dqTaggedAssets": 21,
+      "dqGold": 6,
+      "dqSilver": 7,
+      "dqBronze": 8,
+      "dqMissing": 1,
+      "missingAssets": [
+        "fact_sale"
+      ]
+    },
+    {
+      "dataProduct": "Convergence B2B",
+      "linkedAssets": 13,
+      "linkedTerms": 2,
+      "dqTaggedAssets": 13,
+      "dqGold": 3,
+      "dqSilver": 9,
+      "dqBronze": 1,
+      "dqMissing": 0,
+      "missingAssets": []
+    },
+    {
+      "dataProduct": "Customer 360",
+      "linkedAssets": 10,
+      "linkedTerms": 16,
+      "dqTaggedAssets": 10,
+      "dqGold": 10,
+      "dqSilver": 0,
+      "dqBronze": 0,
+      "dqMissing": 0,
+      "missingAssets": []
+    },
+    {
+      "dataProduct": "Data Platform Health Monitor",
+      "linkedAssets": 3,
+      "linkedTerms": 4,
+      "dqTaggedAssets": 3,
+      "dqGold": 3,
+      "dqSilver": 0,
+      "dqBronze": 0,
+      "dqMissing": 0,
+      "missingAssets": []
+    },
+    {
+      "dataProduct": "ESG and CSRD Reporting Pack",
+      "linkedAssets": 2,
+      "linkedTerms": 8,
+      "dqTaggedAssets": 2,
+      "dqGold": 2,
+      "dqSilver": 0,
+      "dqBronze": 0,
+      "dqMissing": 0,
+      "missingAssets": []
+    },
+    {
+      "dataProduct": "Executive Financial Dashboards",
+      "linkedAssets": 13,
+      "linkedTerms": 9,
+      "dqTaggedAssets": 12,
+      "dqGold": 12,
+      "dqSilver": 0,
+      "dqBronze": 0,
+      "dqMissing": 1,
+      "missingAssets": [
+        "fact_sale"
+      ]
+    },
+    {
+      "dataProduct": "Operational Performance Hub",
+      "linkedAssets": 10,
+      "linkedTerms": 4,
+      "dqTaggedAssets": 10,
+      "dqGold": 3,
+      "dqSilver": 7,
+      "dqBronze": 0,
+      "dqMissing": 0,
+      "missingAssets": []
+    },
+    {
+      "dataProduct": "Workforce Analytics Dashboard",
+      "linkedAssets": 10,
+      "linkedTerms": 6,
+      "dqTaggedAssets": 10,
+      "dqGold": 3,
+      "dqSilver": 7,
+      "dqBronze": 0,
+      "dqMissing": 0,
+      "missingAssets": []
+    }
+  ]
+}

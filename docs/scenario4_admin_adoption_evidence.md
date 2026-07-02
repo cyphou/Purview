@@ -1,15 +1,15 @@
 # Scenario 4 Admin and Adoption Evidence
 
-Generated: 2026-06-01 20:58:00
+Generated: 2026-06-02 10:14:13
 Purview account: pdedemopurv
 
 ## Catalog coverage snapshot
 
 - Business domains: 30
-- Terms: 100
+- Terms: 106
 - Data products: 15
-- Objectives (OKRs): 7
-- Critical Data Elements: 19
+- Objectives (OKRs): 9
+- Critical Data Elements: 25
 
 ## Persona to role mapping
 

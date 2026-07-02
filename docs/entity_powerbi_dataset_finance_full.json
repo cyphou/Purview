@@ -1,0 +1,266 @@
+{
+  "referredEntities": {
+    "5944dd01-3547-48d9-a372-7e3ebc8a623e": {
+      "typeName": "powerbi_dataset_process",
+      "attributes": {
+        "owner": null,
+        "outputs": [
+          {
+            "guid": "0d401759-00e0-4dd7-a703-c65994568beb",
+            "typeName": "powerbi_dataset",
+            "uniqueAttributes": {
+              "qualifiedName": "https://app.powerbi.com/groups/7000dcc5-3063-4dc7-99f5-965d551c2083/datasets/6b2e4d57-5492-4d99-85ec-1d23560b58a4"
+            }
+          }
+        ],
+        "replicatedTo": null,
+        "userDescription": null,
+        "replicatedFrom": null,
+        "qualifiedName": "https://app.powerbi.com/groups/7000dcc5-3063-4dc7-99f5-965d551c2083/datasetprocesses/6b2e4d57-5492-4d99-85ec-1d23560b58a4",
+        "displayName": "Finance Report",
+        "inputs": [],
+        "isEffectiveIdentityRequired": false,
+        "errorMessage": null,
+        "description": null,
+        "isOnPremGatewayRequired": false,
+        "addRowsApiEnabled": false,
+        "name": "https://app.powerbi.com/groups/7000dcc5-3063-4dc7-99f5-965d551c2083/datasetprocesses/6b2e4d57-5492-4d99-85ec-1d23560b58a4",
+        "tenantId": "2bfad6b9-88f6-4129-a60f-457babf01498",
+        "isEffectiveIdentityRolesRequired": false,
+        "status": null,
+        "columnMapping": null
+      },
+      "lastModifiedTS": "13",
+      "guid": "5944dd01-3547-48d9-a372-7e3ebc8a623e",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "ServiceAdmin",
+      "createTime": 1712567939576,
+      "updateTime": 1780397621496,
+      "version": 0,
+      "isIndexed": true,
+      "source": "DataScan",
+      "sourceDetails": {
+        "ScanResourceId": "datasources/Fabric-FullTenant/scans/Scan-dkP"
+      },
+      "collectionId": "hklbqp",
+      "domainId": "pdedemopurv",
+      "relationshipAttributes": {
+        "outputs": [
+          {
+            "guid": "0d401759-00e0-4dd7-a703-c65994568beb",
+            "typeName": "powerbi_dataset",
+            "entityStatus": "ACTIVE",
+            "displayText": "Finance Report",
+            "relationshipType": "process_dataset_outputs",
+            "relationshipGuid": "579ad1f4-7ae9-9458-88f5-9d7a413f9ec2",
+            "relationshipStatus": "ACTIVE",
+            "relationshipAttributes": {
+              "typeName": "process_dataset_outputs"
+            }
+          }
+        ],
+        "inputs": [],
+        "dataset": {
+          "guid": "0d401759-00e0-4dd7-a703-c65994568beb",
+          "typeName": "powerbi_dataset",
+          "entityStatus": "ACTIVE",
+          "displayText": "Finance Report",
+          "relationshipType": "powerbi_dataset_datasetProcess",
+          "relationshipGuid": "b93fffcb-35a7-4090-998d-7fbd4b5c53ab",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "powerbi_dataset_datasetProcess"
+          }
+        },
+        "meanings": []
+      },
+      "classifications": [
+        {
+          "typeName": "MICROSOFT.POWERBI.ENDORSEMENT",
+          "attributes": {
+            "endorsement": "Promoted",
+            "certifiedBy": null
+          },
+          "lastModifiedTS": "13",
+          "entityGuid": "5944dd01-3547-48d9-a372-7e3ebc8a623e",
+          "entityStatus": "ACTIVE",
+          "source": "DataScan",
+          "createdBy": "ServiceAdmin",
+          "updatedBy": "ServiceAdmin",
+          "createTime": 1712567939576,
+          "updateTime": 1780397621496
+        }
+      ],
+      "labels": [],
+      "displayText": "Finance Report",
+      "proxy": false
+    }
+  },
+  "entity": {
+    "typeName": "powerbi_dataset",
+    "attributes": {
+      "owner": null,
+      "isRefreshable": false,
+      "replicatedTo": null,
+      "userDescription": null,
+      "replicatedFrom": null,
+      "qualifiedName": "https://app.powerbi.com/groups/7000dcc5-3063-4dc7-99f5-965d551c2083/datasets/6b2e4d57-5492-4d99-85ec-1d23560b58a4",
+      "displayName": "Finance Report",
+      "description": null,
+      "contentProviderType": "PbixInImportMode",
+      "users": [
+        {
+          "emailAddress": "admin@MngEnvMCAP965390.onmicrosoft.com",
+          "displayName": "System Administrator",
+          "userAccessRight": "ReadWriteReshareExplore",
+          "graphId": "6617cad6-d329-4361-951a-9eacbbaa8049"
+        },
+        {
+          "emailAddress": "pbi@mngenvmcap965390.onmicrosoft.com",
+          "displayName": "pbi",
+          "userAccessRight": "ReadWriteReshareExplore",
+          "graphId": "b568a793-1e38-4d6d-bbac-238c7a02df7e"
+        }
+      ],
+      "dedicatedCapacityName": "Trial-20260407T122854Z-X1eyzPAG8UmouEN3Km2UBQ",
+      "createdDate": 1673425405337,
+      "name": "https://app.powerbi.com/groups/7000dcc5-3063-4dc7-99f5-965d551c2083/datasets/6b2e4d57-5492-4d99-85ec-1d23560b58a4",
+      "tenantId": "2bfad6b9-88f6-4129-a60f-457babf01498",
+      "workspaceName": "DDiB-FSI",
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "targetStorageMode": "Abf"
+    },
+    "lastModifiedTS": "26",
+    "guid": "0d401759-00e0-4dd7-a703-c65994568beb",
+    "isIncomplete": false,
+    "provenanceType": 0,
+    "status": "ACTIVE",
+    "createdBy": "ServiceAdmin",
+    "updatedBy": "ServiceAdmin",
+    "createTime": 1712567939576,
+    "updateTime": 1780397626486,
+    "version": 0,
+    "isIndexed": true,
+    "source": "DataScan",
+    "sourceDetails": {
+      "ScanResourceId": "datasources/Fabric-FullTenant/scans/Scan-dkP"
+    },
+    "collectionId": "hklbqp",
+    "domainId": "pdedemopurv",
+    "relationshipAttributes": {
+      "inputToProcesses": [
+        {
+          "guid": "2a72c3fd-98be-4096-bb5b-b87386757b77",
+          "typeName": "powerbi_report_process",
+          "entityStatus": "ACTIVE",
+          "displayText": "Finance Report",
+          "relationshipType": "dataset_process_inputs",
+          "relationshipGuid": "ca805bc3-2961-ff9e-f892-04abf2cb4aea",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "dataset_process_inputs"
+          }
+        }
+      ],
+      "schema": [],
+      "workspace": {
+        "guid": "e88189da-44b3-4611-878e-d8affeea4802",
+        "typeName": "fabric_workspace",
+        "entityStatus": "ACTIVE",
+        "displayText": "DDiB-FSI",
+        "relationshipType": "powerbi_dataset_workspace",
+        "relationshipGuid": "dd1716f0-3218-4b11-b375-0b86a2bb3718",
+        "relationshipStatus": "ACTIVE",
+        "relationshipAttributes": {
+          "typeName": "powerbi_dataset_workspace"
+        }
+      },
+      "tables": [],
+      "sources": [],
+      "sinks": [],
+      "attachedSchema": [],
+      "datasetProcess": {
+        "guid": "5944dd01-3547-48d9-a372-7e3ebc8a623e",
+        "typeName": "powerbi_dataset_process",
+        "entityStatus": "ACTIVE",
+        "displayText": "Finance Report",
+        "relationshipType": "powerbi_dataset_datasetProcess",
+        "relationshipGuid": "b93fffcb-35a7-4090-998d-7fbd4b5c53ab",
+        "relationshipStatus": "ACTIVE",
+        "relationshipAttributes": {
+          "typeName": "powerbi_dataset_datasetProcess"
+        }
+      },
+      "meanings": [
+        {
+          "guid": "6d75a2e5-ee66-4e9c-a2cb-f4771d668579",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Revenue",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "29bb45b5-7e27-4a44-af24-9cf9b6db492a",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        }
+      ],
+      "outputFromProcesses": [
+        {
+          "guid": "5944dd01-3547-48d9-a372-7e3ebc8a623e",
+          "typeName": "powerbi_dataset_process",
+          "entityStatus": "ACTIVE",
+          "displayText": "Finance Report",
+          "relationshipType": "process_dataset_outputs",
+          "relationshipGuid": "579ad1f4-7ae9-9458-88f5-9d7a413f9ec2",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "process_dataset_outputs"
+          }
+        }
+      ]
+    },
+    "classifications": [
+      {
+        "typeName": "MICROSOFT.POWERBI.ENDORSEMENT",
+        "attributes": {
+          "endorsement": "Promoted",
+          "certifiedBy": null
+        },
+        "lastModifiedTS": "13",
+        "entityGuid": "0d401759-00e0-4dd7-a703-c65994568beb",
+        "entityStatus": "ACTIVE",
+        "source": "DataScan",
+        "createdBy": "ServiceAdmin",
+        "updatedBy": "ServiceAdmin",
+        "createTime": 1712567939576,
+        "updateTime": 1780397621496
+      },
+      {
+        "typeName": "DQ_Gold",
+        "lastModifiedTS": "1",
+        "entityGuid": "0d401759-00e0-4dd7-a703-c65994568beb",
+        "entityStatus": "ACTIVE",
+        "createdBy": "0738cec4-3dd2-4d28-86bc-9585d85eb511",
+        "updatedBy": "0738cec4-3dd2-4d28-86bc-9585d85eb511",
+        "createTime": 1777964671757,
+        "updateTime": 1777964671757
+      }
+    ],
+    "labels": [],
+    "displayText": "Finance Report",
+    "proxy": false
+  }
+}

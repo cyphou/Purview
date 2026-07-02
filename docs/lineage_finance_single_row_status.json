@@ -1,0 +1,18 @@
+{
+  "generatedAtUtc": "2026-06-02T12:29:28Z",
+  "singleSalesforceToSnowflakeProcessGuid": "fabccda9-aa60-4f87-96dd-e5a253943366",
+  "singleSnowflakeToPowerBIProcessGuid": "7d828ae9-a0a8-49ef-8d5a-d5d3145292a5",
+  "totalFinancePathProcesses": 2,
+  "processes": [
+    {
+      "name": "LMAP_SF_TO_SNOW_SINGLE",
+      "guid": "fabccda9-aa60-4f87-96dd-e5a253943366",
+      "qualifiedName": "lineage://finance_path/salesforce_to_snowflake/single_row"
+    },
+    {
+      "name": "LMAP_SNOW_TO_PBI_SINGLE",
+      "guid": "7d828ae9-a0a8-49ef-8d5a-d5d3145292a5",
+      "qualifiedName": "lineage://finance_path/snowflake_to_powerbi/single_row"
+    }
+  ]
+}

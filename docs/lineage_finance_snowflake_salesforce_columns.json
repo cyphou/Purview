@@ -1,0 +1,340 @@
+{
+  "generatedAtUtc": "2026-06-02T11:31:34Z",
+  "scope": "Finance Report <- Snowflake <- Salesforce (column lineage)",
+  "financeDatasetGuid": "0d401759-00e0-4dd7-a703-c65994568beb",
+  "powerbiTableQualifiedName": "https://app.powerbi.com/groups/7000dcc5-3063-4dc7-99f5-965d551c2083/datasets/6b2e4d57-5492-4d99-85ec-1d23560b58a4/tables/FinanceModel",
+  "mappings": {
+    "salesforceToSnowflake": [
+      {
+        "sf": "CUSTOMER_ID",
+        "snow": "C_CUSTKEY"
+      },
+      {
+        "sf": "CUSTOMER_NAME",
+        "snow": "C_NAME"
+      },
+      {
+        "sf": "CUSTOMER_SEGMENT",
+        "snow": "C_MKTSEGMENT"
+      },
+      {
+        "sf": "CUSTOMER_BALANCE",
+        "snow": "C_ACCTBAL"
+      },
+      {
+        "sf": "CUSTOMER_ADDRESS",
+        "snow": "C_ADDRESS"
+      },
+      {
+        "sf": "CUSTOMER_PHONE",
+        "snow": "C_PHONE"
+      },
+      {
+        "sf": "NATION_KEY",
+        "snow": "C_NATIONKEY"
+      },
+      {
+        "sf": "ORDER_ID",
+        "snow": "O_ORDERKEY"
+      },
+      {
+        "sf": "ORDER_STATUS",
+        "snow": "O_ORDERSTATUS"
+      }
+    ],
+    "snowflakeToPowerBI": [
+      {
+        "pbi": "CUSTOMER_ID",
+        "snow": "C_CUSTKEY"
+      },
+      {
+        "pbi": "CUSTOMER_NAME",
+        "snow": "C_NAME"
+      },
+      {
+        "pbi": "CUSTOMER_SEGMENT",
+        "snow": "C_MKTSEGMENT"
+      },
+      {
+        "pbi": "ORDER_ID",
+        "snow": "O_ORDERKEY"
+      },
+      {
+        "pbi": "ORDER_DATE",
+        "snow": "O_ORDERDATE"
+      },
+      {
+        "pbi": "TOTAL_REVENUE",
+        "snow": "O_TOTALPRICE"
+      },
+      {
+        "pbi": "NET_REVENUE",
+        "snow": "L_EXTENDEDPRICE"
+      },
+      {
+        "pbi": "DISCOUNT_AMOUNT",
+        "snow": "L_DISCOUNT"
+      },
+      {
+        "pbi": "SHIP_DATE",
+        "snow": "L_SHIPDATE"
+      },
+      {
+        "pbi": "ORDER_STATUS",
+        "snow": "O_ORDERSTATUS"
+      }
+    ]
+  },
+  "verification": {
+    "expectedProcesses": 19,
+    "verifiedProcesses": 19,
+    "verifiedSalesforceToSnowflake": 9,
+    "verifiedSnowflakeToPowerBI": 10
+  },
+  "processVerificationRows": [
+    {
+      "process": "LMAP_SF_TO_SNOW_CUSTOMER_ID",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "33bafead-3a7a-4744-9161-3e052858c1ad",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "CUSTOMER_ID",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_CUSTKEY",
+      "lineageEntityCountFromProcess": 7
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_CUSTOMER_NAME",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "0429057c-e9de-4877-b84c-9d165ea1fe7d",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "CUSTOMER_NAME",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_NAME",
+      "lineageEntityCountFromProcess": 7
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_CUSTOMER_SEGMENT",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "d6318da9-2e81-4f7e-b088-3c17b450ac5d",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "CUSTOMER_SEGMENT",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_MKTSEGMENT",
+      "lineageEntityCountFromProcess": 7
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_CUSTOMER_BALANCE",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "c1d6b7d6-a884-408b-b3af-f644c6f5ce0e",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "CUSTOMER_BALANCE",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_ACCTBAL",
+      "lineageEntityCountFromProcess": 8
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_CUSTOMER_ADDRESS",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "91087973-37d7-477e-a79c-628858b4a6c3",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "CUSTOMER_ADDRESS",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_ADDRESS",
+      "lineageEntityCountFromProcess": 8
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_CUSTOMER_PHONE",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "470782e9-631d-4b1b-a115-ad72d54e614a",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "CUSTOMER_PHONE",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_PHONE",
+      "lineageEntityCountFromProcess": 8
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_NATION_KEY",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "405369c4-9dc0-4fe0-be7f-ac0a3343a7b5",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "NATION_KEY",
+      "outputType": "snowflake_table_column",
+      "outputName": "C_NATIONKEY",
+      "lineageEntityCountFromProcess": 8
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_ORDER_ID",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "502cab7b-590f-43c4-a14d-da55fa9fbc6d",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "ORDER_ID",
+      "outputType": "snowflake_table_column",
+      "outputName": "O_ORDERKEY",
+      "lineageEntityCountFromProcess": 9
+    },
+    {
+      "process": "LMAP_SF_TO_SNOW_ORDER_STATUS",
+      "hop": "salesforce_to_snowflake",
+      "processGuid": "83a96aeb-0438-460c-9f60-8b050b6f81c6",
+      "status": "ok",
+      "inputType": "salesforce_field",
+      "inputName": "ORDER_STATUS",
+      "outputType": "snowflake_table_column",
+      "outputName": "O_ORDERSTATUS",
+      "lineageEntityCountFromProcess": 9
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_CUSTOMER_ID",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "c799bfeb-3e51-41d5-8bf0-bc7aa090c885",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "C_CUSTKEY",
+      "outputType": "powerbi_column",
+      "outputName": "CUSTOMER_ID",
+      "lineageEntityCountFromProcess": 16
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_CUSTOMER_NAME",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "46dec1b5-c2f3-495d-9a0b-dba66c3531a5",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "C_NAME",
+      "outputType": "powerbi_column",
+      "outputName": "CUSTOMER_NAME",
+      "lineageEntityCountFromProcess": 16
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_CUSTOMER_SEGMENT",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "e53bea5e-67a1-4dff-a366-f5a3093e9d18",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "C_MKTSEGMENT",
+      "outputType": "powerbi_column",
+      "outputName": "CUSTOMER_SEGMENT",
+      "lineageEntityCountFromProcess": 16
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_ORDER_ID",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "340229bc-c499-42fe-8043-c18c4125c2e3",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "O_ORDERKEY",
+      "outputType": "powerbi_column",
+      "outputName": "ORDER_ID",
+      "lineageEntityCountFromProcess": 5
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_ORDER_DATE",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "a1ef121c-e0ad-4f0d-a6a5-a89b91cae6f0",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "O_ORDERDATE",
+      "outputType": "powerbi_column",
+      "outputName": "ORDER_DATE",
+      "lineageEntityCountFromProcess": 6
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_TOTAL_REVENUE",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "91b1475f-51af-4b04-9171-236efb3a6ca3",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "O_TOTALPRICE",
+      "outputType": "powerbi_column",
+      "outputName": "TOTAL_REVENUE",
+      "lineageEntityCountFromProcess": 6
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_NET_REVENUE",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "b5f42535-0593-4c0e-917a-836f77824479",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "L_EXTENDEDPRICE",
+      "outputType": "powerbi_column",
+      "outputName": "NET_REVENUE",
+      "lineageEntityCountFromProcess": 0
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_DISCOUNT_AMOUNT",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "0fa4df10-ffb8-4f43-bdee-72d502c5122c",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "L_DISCOUNT",
+      "outputType": "powerbi_column",
+      "outputName": "DISCOUNT_AMOUNT",
+      "lineageEntityCountFromProcess": 0
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_SHIP_DATE",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "dd22ed45-b41f-4174-877b-45dfd95b39f5",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "L_SHIPDATE",
+      "outputType": "powerbi_column",
+      "outputName": "SHIP_DATE",
+      "lineageEntityCountFromProcess": 0
+    },
+    {
+      "process": "LMAP_SNOW_TO_PBI_ORDER_STATUS",
+      "hop": "snowflake_to_powerbi",
+      "processGuid": "92121e06-c2da-4697-bee6-30cbea371f1a",
+      "status": "ok",
+      "inputType": "snowflake_table_column",
+      "inputName": "O_ORDERSTATUS",
+      "outputType": "powerbi_column",
+      "outputName": "ORDER_STATUS",
+      "lineageEntityCountFromProcess": 5
+    }
+  ],
+  "dataProductAssetLinking": {
+    "dataProductId": "4baeadc4-224c-43be-93a5-819ed2fb9e97",
+    "linkedOrExisting": [
+      "Finance Report (already linked)"
+    ],
+    "missingDataAssetForAtlasGuid": [
+      "ff85faf3-8863-479e-a443-bf5f6f6f6000",
+      "040af482-eef1-477a-9f8d-f5f6f6f60000",
+      "bf8d0719-0ba5-45d9-a96c-1df6f6f60000",
+      "eea7dfee-89a1-43fc-ab83-9cf6f6f60000",
+      "8d02c8fe-d541-4b95-bcb0-0cf6f6f60000",
+      "70818ae9-5e85-4fd2-90cb-a9f6f6f60000"
+    ]
+  },
+  "createdOrExistingProcesses": [
+    "LMAP_SF_TO_SNOW_CUSTOMER_ID [33bafead-3a7a-4744-9161-3e052858c1ad]",
+    "LMAP_SF_TO_SNOW_CUSTOMER_NAME [0429057c-e9de-4877-b84c-9d165ea1fe7d]",
+    "LMAP_SF_TO_SNOW_CUSTOMER_SEGMENT [d6318da9-2e81-4f7e-b088-3c17b450ac5d]",
+    "LMAP_SF_TO_SNOW_CUSTOMER_BALANCE [c1d6b7d6-a884-408b-b3af-f644c6f5ce0e]",
+    "LMAP_SF_TO_SNOW_CUSTOMER_ADDRESS [91087973-37d7-477e-a79c-628858b4a6c3]",
+    "LMAP_SF_TO_SNOW_CUSTOMER_PHONE [470782e9-631d-4b1b-a115-ad72d54e614a]",
+    "LMAP_SF_TO_SNOW_NATION_KEY [405369c4-9dc0-4fe0-be7f-ac0a3343a7b5]",
+    "LMAP_SF_TO_SNOW_ORDER_ID [502cab7b-590f-43c4-a14d-da55fa9fbc6d]",
+    "LMAP_SF_TO_SNOW_ORDER_STATUS [83a96aeb-0438-460c-9f60-8b050b6f81c6]",
+    "LMAP_SNOW_TO_PBI_CUSTOMER_ID [c799bfeb-3e51-41d5-8bf0-bc7aa090c885]",
+    "LMAP_SNOW_TO_PBI_CUSTOMER_NAME [46dec1b5-c2f3-495d-9a0b-dba66c3531a5]",
+    "LMAP_SNOW_TO_PBI_CUSTOMER_SEGMENT [e53bea5e-67a1-4dff-a366-f5a3093e9d18]",
+    "LMAP_SNOW_TO_PBI_ORDER_ID [340229bc-c499-42fe-8043-c18c4125c2e3]",
+    "LMAP_SNOW_TO_PBI_ORDER_DATE [a1ef121c-e0ad-4f0d-a6a5-a89b91cae6f0]",
+    "LMAP_SNOW_TO_PBI_TOTAL_REVENUE [91b1475f-51af-4b04-9171-236efb3a6ca3]",
+    "LMAP_SNOW_TO_PBI_NET_REVENUE [b5f42535-0593-4c0e-917a-836f77824479]",
+    "LMAP_SNOW_TO_PBI_DISCOUNT_AMOUNT [0fa4df10-ffb8-4f43-bdee-72d502c5122c]",
+    "LMAP_SNOW_TO_PBI_SHIP_DATE [dd22ed45-b41f-4174-877b-45dfd95b39f5]",
+    "LMAP_SNOW_TO_PBI_ORDER_STATUS [92121e06-c2da-4697-bee6-30cbea371f1a]"
+  ]
+}

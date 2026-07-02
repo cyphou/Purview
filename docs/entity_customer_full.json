@@ -1,0 +1,817 @@
+{
+  "referredEntities": {
+    "183cdb2a-dd72-497f-8a10-44f6f6f60001": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Free-text customer comment. Variable-length text field for notes and observations. FR: Commentaire client en texte libre.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_COMMENT",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": true,
+        "name": "C_COMMENT",
+        "length": 117,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60001",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323662564,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "d272f60d-2ceb-4022-b0b7-69cf709ae14a",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_COMMENT",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60002": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Market segment classification. One of: AUTOMOBILE, BUILDING, FURNITURE, HOUSEHOLD, MACHINERY. Used for customer segmentation and targeted marketing analysis. FR: Segment de marche : AUTOMOBILE, BUILDING, FURNITURE, HOUSEHOLD, MACHINERY. Utilise pour la segmentation client et l'analyse marketing ciblee.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_MKTSEGMENT",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": true,
+        "name": "C_MKTSEGMENT",
+        "length": 10,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60002",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323660467,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [
+          {
+            "guid": "0f9b76b4-40f2-4563-aebd-6b6baeeb6c19",
+            "typeName": "AtlasGlossaryTerm",
+            "entityStatus": "ACTIVE",
+            "displayText": "Customer Segment",
+            "relationshipType": "AtlasGlossarySemanticAssignment",
+            "relationshipGuid": "4de56d78-0a90-40bb-a29d-9700bb89a0ef",
+            "relationshipStatus": "ACTIVE",
+            "relationshipAttributes": {
+              "typeName": "AtlasGlossarySemanticAssignment",
+              "attributes": {
+                "expression": null,
+                "createdBy": null,
+                "steward": null,
+                "confidence": null,
+                "description": null,
+                "source": null,
+                "status": null
+              }
+            }
+          }
+        ],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "3e335c5b-ffa9-4a8f-a529-a74aafdc3625",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_MKTSEGMENT",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60003": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Customer account balance. Decimal value representing current credit balance. Positive = credit available, negative = amount owed. Used in credit risk analysis and customer segmentation. FR: Solde du compte client. Positif = credit disponible, negatif = montant du. Utilise pour l'analyse du risque de credit et la segmentation client.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_ACCTBAL",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "C_ACCTBAL",
+        "length": 12,
+        "description": "",
+        "scale": 2
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60003",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323658893,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [
+          {
+            "guid": "a3fcf47f-ec2e-45da-b3fc-930e80e6e981",
+            "typeName": "AtlasGlossaryTerm",
+            "entityStatus": "ACTIVE",
+            "displayText": "CLV",
+            "relationshipType": "AtlasGlossarySemanticAssignment",
+            "relationshipGuid": "c0d46429-bdf3-4c98-bd7c-1c50a1b58449",
+            "relationshipStatus": "ACTIVE",
+            "relationshipAttributes": {
+              "typeName": "AtlasGlossarySemanticAssignment",
+              "attributes": {
+                "expression": null,
+                "createdBy": null,
+                "steward": null,
+                "confidence": null,
+                "description": null,
+                "source": null,
+                "status": null
+              }
+            }
+          }
+        ],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "f7ab032c-234a-4a30-bcf5-c452ec7f319d",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_ACCTBAL",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60004": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Customer phone number. Format: 'CC-NNNNNNNNNN' where CC is country code. PII field subject to data privacy regulations. FR: Numero de telephone client. Format : 'CC-NNNNNNNNNN'. Donnee personnelle soumise a la reglementation sur la vie privee.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_PHONE",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "C_PHONE",
+        "length": 15,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60004",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323657013,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "78d41c9e-ce6c-44c8-ac40-a6a0f67dbf75",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_PHONE",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60005": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Foreign key to NATION table. Links customer to their country of origin. Used for geographic segmentation and regional analysis. FR: Cle etrangere vers NATION. Relie le client a son pays d'origine pour la segmentation geographique.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_NATIONKEY",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "C_NATIONKEY",
+        "length": 38,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60005",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323655552,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "e7373f0e-aca4-4319-8ab2-b250cb66b010",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_NATIONKEY",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60006": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Unique customer identifier (surrogate key). Integer, auto-generated. Used as primary key and referenced by ORDERS.O_CUSTKEY for order-customer joins. FR: Identifiant client unique (cle de substitution). Reference par ORDERS.O_CUSTKEY.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_CUSTKEY",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "C_CUSTKEY",
+        "length": 38,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60006",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323649716,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "16b0e4b2-3ff9-4434-9558-d549030c8ef1",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_CUSTKEY",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60007": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Customer mailing address (street-level). Variable-length string. May contain PII requiring GDPR compliance measures. FR: Adresse postale du client. Peut contenir des DCP necessitant la conformite RGPD.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_ADDRESS",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "C_ADDRESS",
+        "length": 40,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60007",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323653502,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "9847000f-6a20-4e91-a8ce-073e3e603cc2",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_ADDRESS",
+      "proxy": false
+    },
+    "183cdb2a-dd72-497f-8a10-44f6f6f60008": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Customer full name. Format: 'Customer#NNNNNNNNNN'. Used for display and reporting. FR: Nom complet du client. Format : 'Customer#NNNNNNNNNN'.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER/columns/C_NAME",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "C_NAME",
+        "length": 25,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60008",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171568,
+      "updateTime": 1780323651804,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "CUSTOMER",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "77522f24-ee8e-43b0-96ff-a2b5f48c1b3a",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "C_NAME",
+      "proxy": false
+    }
+  },
+  "entity": {
+    "typeName": "snowflake_table",
+    "attributes": {
+      "owner": null,
+      "modifiedTime": 1697759157000,
+      "replicatedTo": null,
+      "userDescription": "Customer master table from TPC-H benchmark (Scale Factor 1). Contains 150,000 customer records with demographics, account balance, market segment, and geographic references.\r\nPrimary key: C_CUSTKEY. Joins to ORDERS via O_CUSTKEY and to NATION via C_NATIONKEY.\r\n\r\nFR: Table maitresse clients (benchmark TPC-H, SF1). 150 000 enregistrements clients avec donnees demographiques, solde de compte, segment de marche et references geographiques. Cle primaire : C_CUSTKEY. Jointures : ORDERS (O_CUSTKEY), NATION (C_NATIONKEY).",
+      "replicatedFrom": null,
+      "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/CUSTOMER",
+      "displayName": null,
+      "name": "CUSTOMER",
+      "description": "Customer data as defined by TPC-H",
+      "type": "TABLE"
+    },
+    "lastModifiedTS": "21",
+    "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+    "isIncomplete": false,
+    "provenanceType": 0,
+    "status": "ACTIVE",
+    "createdBy": "ServiceAdmin",
+    "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+    "createTime": 1712849171568,
+    "updateTime": 1780326286781,
+    "version": 0,
+    "isIndexed": true,
+    "sourceDetails": {
+      "userModifiedAttributes": [
+        "userDescription"
+      ],
+      "__schemaModifiedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "__schemaModifiedTime": 1780323662564
+    },
+    "collectionId": "242twh",
+    "relationshipAttributes": {
+      "inputToProcesses": [],
+      "schema": [],
+      "dbSchema": {
+        "guid": "5cc46b54-c88d-4080-8422-0a9bc3ab8348",
+        "typeName": "snowflake_schema",
+        "entityStatus": "ACTIVE",
+        "displayText": "TPCH_SF1",
+        "relationshipType": "snowflake_schema_tables",
+        "relationshipGuid": "4651c88a-6e71-4603-8848-488a36132a7d",
+        "relationshipStatus": "ACTIVE",
+        "relationshipAttributes": {
+          "typeName": "snowflake_schema_tables"
+        }
+      },
+      "sources": [],
+      "sinks": [],
+      "unique_constraints": [],
+      "attachedSchema": [],
+      "foreign_keys": [],
+      "table_columns": [
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60006",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_CUSTKEY",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "16b0e4b2-3ff9-4434-9558-d549030c8ef1",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60008",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_NAME",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "77522f24-ee8e-43b0-96ff-a2b5f48c1b3a",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60007",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_ADDRESS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "9847000f-6a20-4e91-a8ce-073e3e603cc2",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60005",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_NATIONKEY",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "e7373f0e-aca4-4319-8ab2-b250cb66b010",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60004",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_PHONE",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "78d41c9e-ce6c-44c8-ac40-a6a0f67dbf75",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60003",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_ACCTBAL",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "f7ab032c-234a-4a30-bcf5-c452ec7f319d",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60002",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_MKTSEGMENT",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "3e335c5b-ffa9-4a8f-a529-a74aafdc3625",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "183cdb2a-dd72-497f-8a10-44f6f6f60001",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "C_COMMENT",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "d272f60d-2ceb-4022-b0b7-69cf709ae14a",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        }
+      ],
+      "meanings": [
+        {
+          "guid": "a6c7b06c-6167-4580-a0f6-d2bcd4018786",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "CSAT",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "6a4ec7d3-e75b-4a5d-9f2b-9a8385afb0a4",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "fa5e6c07-7688-40ea-9a16-6eba823c8ecc",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "NPS",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "ac84e4cc-fa8f-46c1-b5b1-e3323c47e1de",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "b6c12d11-d70e-479f-a251-651418981218",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Churn Rate",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "8614bd7d-1e14-41d5-a1cb-88e7b42bb7f2",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "01bcc32b-ab03-4cbc-a7f6-b92c4c9b50fb",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Customer Key Performance Indicator",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "2a36c027-1c9f-461e-835c-9e4003fbb991",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "97da7ffa-60a0-4324-af36-ed5bac750dd2",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Customer Satisfaction",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "43aeccbb-e76d-4f4d-aa69-7877f9fb1fa3",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "8916e381-9e6b-40dd-8f2a-988ac8a291bb",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Customer Relationship Management",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "631ff0c2-e99c-4d0f-9d43-9cee12d33494",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        }
+      ],
+      "outputFromProcesses": []
+    },
+    "classifications": [
+      {
+        "typeName": "DQ_Gold",
+        "lastModifiedTS": "1",
+        "entityGuid": "183cdb2a-dd72-497f-8a10-44f6f6f60000",
+        "entityStatus": "ACTIVE",
+        "createdBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+        "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+        "createTime": 1780326286781,
+        "updateTime": 1780326286781
+      }
+    ],
+    "labels": [],
+    "displayText": "CUSTOMER",
+    "proxy": false
+  }
+}

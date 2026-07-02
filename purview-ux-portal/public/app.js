@@ -1,27 +1,11 @@
-const metricsGrid = document.getElementById("metricsGrid");
-const readinessBoard = document.getElementById("readinessBoard");
-const scenarioNav = document.getElementById("scenarioNav");
-const presetQueries = document.getElementById("presetQueries");
-
 const searchForm = document.getElementById("searchForm");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
 const governedResults = document.getElementById("governedResults");
 const objectFilters = document.getElementById("objectFilters");
-
-const dataProducts = document.getElementById("dataProducts");
-const assetsForProduct = document.getElementById("assetsForProduct");
-const assetHint = document.getElementById("assetHint");
+const discoveryTree = document.getElementById("discoveryTree");
 
 const refreshBtn = document.getElementById("refreshBtn");
-const loadEvidenceBtn = document.getElementById("loadEvidenceBtn");
-const evidenceBox = document.getElementById("evidenceBox");
-
-const scenarioTitle = document.getElementById("scenarioTitle");
-const scenarioObjective = document.getElementById("scenarioObjective");
-const scenarioSteps = document.getElementById("scenarioSteps");
-const scenarioSay = document.getElementById("scenarioSay");
-const scenarioBackup = document.getElementById("scenarioBackup");
 
 const selectedObjectHint = document.getElementById("selectedObjectHint");
 const selectedObjectCard = document.getElementById("selectedObjectCard");
@@ -29,9 +13,6 @@ const lineageBox = document.getElementById("lineageBox");
 
 const template = document.getElementById("resultItemTemplate");
 
-let activeDataProductId = "";
-let activeScenarioId = "explorer";
-let scenarioModels = {};
 let activeObjectKey = "";
 
 async function api(path) {
@@ -55,40 +36,6 @@ function renderError(target, message) {
   li.className = "error";
   li.textContent = message;
   target.appendChild(li);
-}
-
-function metricCard(label, value) {
-  const div = document.createElement("div");
-  div.className = "metric";
-  const p = document.createElement("p");
-  p.textContent = label;
-  const strong = document.createElement("strong");
-  strong.textContent = String(value);
-  div.appendChild(p);
-  div.appendChild(strong);
-  return div;
-}
-
-function readinessCard(label, status, ready, total) {
-  const div = document.createElement("div");
-  div.className = `readiness-card status-${status}`;
-
-  const title = document.createElement("p");
-  title.className = "readiness-title";
-  title.textContent = label;
-
-  const badge = document.createElement("span");
-  badge.className = "readiness-badge";
-  badge.textContent = String(status || "unknown").toUpperCase();
-
-  const score = document.createElement("p");
-  score.className = "readiness-score";
-  score.textContent = `${ready}/${total}`;
-
-  div.appendChild(title);
-  div.appendChild(badge);
-  div.appendChild(score);
-  return div;
 }
 
 function makeResultItem({ name, type, desc, onClick, isActive = false }) {
@@ -116,134 +63,6 @@ function objectLabel(kind) {
     businessDomain: "Business Domain"
   };
   return map[kind] || kind;
-}
-
-function createScenarioModel(id, raw) {
-  const searchTerms = Array.isArray(raw.requiredSearchTerms) ? raw.requiredSearchTerms : [];
-  const dataProductsNeeded = Array.isArray(raw.requiredDataProducts) ? raw.requiredDataProducts : [];
-  const personas = Array.isArray(raw.requiredPersonas) ? raw.requiredPersonas : [];
-
-  if (searchTerms.length > 0) {
-    return {
-      id,
-      title: raw.name || id,
-      objective: "Utiliser la recherche catalogue pour retrouver rapidement les objets metier.",
-      steps: [
-        "Choisir une requete de reference ci-dessous.",
-        "Executer la recherche et ouvrir le meilleur resultat.",
-        "Verifier definition, ownership et contexte d'usage."
-      ],
-      say: "Je reponds a une question metier rapidement a partir du catalogue.",
-      backup: searchTerms.slice(1).join(" -> ") || "Utiliser une requete alternative",
-      presets: searchTerms,
-      focus: "search"
-    };
-  }
-
-  if (dataProductsNeeded.length > 0) {
-    return {
-      id,
-      title: raw.name || id,
-      objective: "Explorer des Data Products et leurs assets relies pour faciliter la reutilisation.",
-      steps: [
-        "Selectionner un Data Product dans l'explorateur.",
-        "Verifier assets, description et statut.",
-        "Confirmer la pertinence pour le besoin metier."
-      ],
-      say: "Je navigue en langage metier et je valide la reutilisation en quelques clics.",
-      backup: dataProductsNeeded.slice(1).join(" -> ") || "Changer de Data Product",
-      presets: dataProductsNeeded,
-      focus: "dataproduct"
-    };
-  }
-
-  if (personas.length > 0) {
-    return {
-      id,
-      title: raw.name || id,
-      objective: "Verifier la readiness role/adoption a partir des artefacts de preuve.",
-      steps: [
-        "Charger la preuve scenario 4.",
-        "Verifier fichiers et personas requis.",
-        "Conclure sur la readiness go-live."
-      ],
-      say: "Meme portail, droits differents, et adoption mesurable.",
-      backup: "S'appuyer sur les artefacts disponibles",
-      presets: [],
-      focus: "evidence"
-    };
-  }
-
-  return {
-    id,
-    title: raw.name || id,
-    objective: "Scenario personnalise charge depuis la configuration.",
-    steps: ["Adapter les actions selon le besoin metier."],
-    say: "Je peux adapter ce scenario au contexte client.",
-    backup: "Passer en mode Explorateur",
-    presets: [],
-    focus: "search"
-  };
-}
-
-function renderScenarioGuide(model) {
-  scenarioTitle.textContent = model.title;
-  scenarioObjective.textContent = model.objective;
-  scenarioSay.textContent = model.say;
-  scenarioBackup.textContent = model.backup;
-
-  clearElement(scenarioSteps);
-  model.steps.forEach((step) => {
-    const li = document.createElement("li");
-    li.textContent = step;
-    scenarioSteps.appendChild(li);
-  });
-}
-
-function renderScenarioButtons() {
-  clearElement(scenarioNav);
-
-  Object.values(scenarioModels).forEach((model) => {
-    const btn = document.createElement("button");
-    btn.className = "scenario-btn";
-    btn.dataset.scenario = model.id;
-    btn.textContent = model.title;
-    btn.addEventListener("click", () => {
-      switchScenario(model.id);
-    });
-    scenarioNav.appendChild(btn);
-  });
-}
-
-function renderPresetQueries(model) {
-  clearElement(presetQueries);
-
-  if (!Array.isArray(model.presets) || model.presets.length === 0) {
-    const hint = document.createElement("p");
-    hint.className = "hint";
-    hint.textContent = "Aucune requete predefinie pour ce scenario. Utilise la recherche libre.";
-    presetQueries.appendChild(hint);
-    return;
-  }
-
-  model.presets.forEach((preset) => {
-    const btn = document.createElement("button");
-    btn.className = "pill";
-    btn.type = "button";
-    btn.dataset.query = preset;
-    btn.textContent = preset;
-    btn.addEventListener("click", async () => {
-      searchInput.value = preset;
-      await runSearch(preset);
-    });
-    presetQueries.appendChild(btn);
-  });
-}
-
-function markActiveScenarioButton(id) {
-  Array.from(scenarioNav.querySelectorAll(".scenario-btn")).forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.scenario === id);
-  });
 }
 
 function getSelectedObjectTypes() {
@@ -345,137 +164,98 @@ async function loadObjectDetails(objectKind, id) {
 
     renderLineage(lineage, objectKind);
   } catch (err) {
-    selectedObjectCard.innerHTML = `<p class=\"error\">Erreur: ${err.message}</p>`;
+    selectedObjectCard.innerHTML = `<p class="error">Erreur: ${err.message}</p>`;
     renderError(governedResults, err.message);
-    lineageBox.innerHTML = `<p class=\"error\">Erreur lineage: ${err.message}</p>`;
+    lineageBox.innerHTML = `<p class="error">Erreur lineage: ${err.message}</p>`;
   }
 }
 
-async function switchScenario(id) {
-  const model = scenarioModels[id];
-  if (!model) {
-    return;
+function normalizeGroupObject(item) {
+  if (!item) {
+    return null;
   }
 
-  activeScenarioId = id;
-  markActiveScenarioButton(id);
-  renderScenarioGuide(model);
-  renderPresetQueries(model);
-
-  if (model.focus === "search" && model.presets.length > 0) {
-    const preset = model.presets[0];
-    searchInput.value = preset;
-    await runSearch(preset);
+  if (item.objectKind) {
+    return item;
   }
 
-  if (model.focus === "evidence") {
-    await loadScenario4Evidence();
-  }
+  return {
+    objectKind: "dataProduct",
+    id: item.id,
+    name: item.name,
+    description: item.description || "",
+    entityType: item.status || "DataProduct"
+  };
 }
 
-async function loadOverview() {
-  metricsGrid.textContent = "Chargement...";
-  try {
-    const { counts } = await api("/api/overview");
-    clearElement(metricsGrid);
-    metricsGrid.appendChild(metricCard("Data Products disponibles", counts.dataProducts));
-    metricsGrid.appendChild(metricCard("Assets catalogues", counts.dataAssets));
-    metricsGrid.appendChild(metricCard("Termes gouvernes", counts.terms));
-    metricsGrid.appendChild(metricCard("Domaines metier", counts.businessDomains));
+function createTreeSection(title, items, emptyText) {
+  const details = document.createElement("details");
+  details.className = "tree-section";
+  details.open = true;
 
-    const readiness =
-      counts.dataProducts >= 3 && counts.terms >= 20 && counts.businessDomains >= 2 ? "READY" : "CHECK";
-    metricsGrid.appendChild(metricCard("Statut demo", readiness));
-  } catch (err) {
-    metricsGrid.textContent = `Erreur: ${err.message}`;
-  }
-}
+  const summary = document.createElement("summary");
+  summary.textContent = `${title} (${items.length})`;
+  details.appendChild(summary);
 
-async function loadReadiness() {
-  readinessBoard.textContent = "Chargement readiness...";
+  const list = document.createElement("ul");
+  list.className = "tree-list";
 
-  try {
-    const data = await api("/api/scenarios/readiness");
-    const scenarios = data.scenarios || {};
-    clearElement(readinessBoard);
-
-    Object.keys(scenarios).forEach((id) => {
-      const s = scenarios[id];
-      readinessBoard.appendChild(readinessCard(s.name || id, s.status, s.ready, s.total));
-    });
-  } catch (err) {
-    readinessBoard.textContent = `Erreur readiness: ${err.message}`;
-  }
-}
-
-async function loadDataProducts() {
-  dataProducts.textContent = "Chargement...";
-  try {
-    const { value } = await api("/api/data-products");
-    clearElement(dataProducts);
-
-    if (!value.length) {
-      renderError(dataProducts, "Aucun Data Product trouve.");
-      return;
-    }
-
-    value.forEach((dp, index) => {
-      const item = makeResultItem({
-        name: dp.name,
-        type: dp.status || "DataProduct",
-        desc: dp.description || "",
-        isActive: activeDataProductId === dp.id,
-        onClick: async () => {
-          activeDataProductId = dp.id;
-          await loadDataProducts();
-          await loadAssetsForProduct(dp.id, dp.name);
-          await loadObjectDetails("dataProduct", dp.id);
-        }
-      });
-      dataProducts.appendChild(item);
-
-      if (!activeDataProductId && index === 0) {
-        activeDataProductId = dp.id;
+  if (!items.length) {
+    const li = document.createElement("li");
+    li.className = "hint";
+    li.textContent = emptyText;
+    list.appendChild(li);
+  } else {
+    items.forEach((raw) => {
+      const item = normalizeGroupObject(raw);
+      if (!item) {
+        return;
       }
-    });
 
-    if (activeDataProductId) {
-      const selected = value.find((v) => v.id === activeDataProductId) || value[0];
-      await loadAssetsForProduct(selected.id, selected.name);
-    }
-  } catch (err) {
-    renderError(dataProducts, err.message);
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "tree-item";
+      button.textContent = item.name || "(sans nom)";
+      button.addEventListener("click", async () => {
+        await loadObjectDetails(item.objectKind, item.id);
+      });
+      li.appendChild(button);
+      list.appendChild(li);
+    });
   }
+
+  details.appendChild(list);
+  return details;
 }
 
-async function loadAssetsForProduct(id, name) {
-  assetsForProduct.textContent = "Chargement...";
-  assetHint.textContent = `Assets lies au Data Product: ${name}`;
+async function loadDiscoveryTree() {
+  discoveryTree.innerHTML = "<p>Chargement arbre...</p>";
 
   try {
-    const { value } = await api(`/api/data-products/${id}/assets`);
-    clearElement(assetsForProduct);
+    const [dataProductsData, glossaryData, assetsData] = await Promise.all([
+      api("/api/data-products"),
+      api("/api/objects/search?query=&types=businessTerm,businessDomain&limit=500"),
+      api("/api/objects/search?query=&types=dataAsset,dataQuality&limit=500")
+    ]);
 
-    if (!value.length) {
-      renderError(assetsForProduct, "Aucun asset relie pour ce Data Product.");
-      return;
-    }
+    const dataProducts = Array.isArray(dataProductsData.value) ? dataProductsData.value : [];
+    const glossary = Array.isArray(glossaryData.value) ? glossaryData.value : [];
+    const assets = Array.isArray(assetsData.value) ? assetsData.value : [];
 
-    value.forEach((asset) => {
-      const desc = asset.qualifiedName || "Asset lie sans qualifiedName visible";
-      assetsForProduct.appendChild(
-        makeResultItem({
-          name: asset.name,
-          type: asset.assetType || "DataAsset",
-          desc,
-          onClick: async () => {
-            await loadObjectDetails("dataAsset", asset.id);
-          }
-        })
-      );
-    });
+    const terms = glossary.filter((item) => item.objectKind === "businessTerm");
+    const domains = glossary.filter((item) => item.objectKind === "businessDomain");
+    const dataAssets = assets.filter((item) => item.objectKind === "dataAsset");
+    const dq = assets.filter((item) => item.objectKind === "dataQuality");
+
+    clearElement(discoveryTree);
+    discoveryTree.appendChild(createTreeSection("Data Products", dataProducts, "Aucun data product"));
+    discoveryTree.appendChild(createTreeSection("Glossary Terms", terms, "Aucun terme"));
+    discoveryTree.appendChild(createTreeSection("Business Domains", domains, "Aucun domaine"));
+    discoveryTree.appendChild(createTreeSection("Data Assets", dataAssets, "Aucun asset"));
+    discoveryTree.appendChild(createTreeSection("Data Quality", dq, "Aucun indicateur DQ"));
   } catch (err) {
-    renderError(assetsForProduct, err.message);
+    discoveryTree.innerHTML = `<p class="error">Erreur: ${err.message}</p>`;
   }
 }
 
@@ -516,107 +296,21 @@ async function runSearch(query) {
   }
 }
 
-async function loadScenario4Evidence() {
-  evidenceBox.textContent = "Chargement de la preuve...";
-  try {
-    const data = await api("/api/scenario4/evidence");
-    const checks = data.personaChecks || {};
-    const lines = [
-      `Fichier JSON: ${data.files && data.files.json ? "OK" : "absent"}`,
-      `Fichier MD: ${data.files && data.files.md ? "OK" : "absent"}`,
-      `cdo: ${checks.cdo ? "mentionne" : "non trouve"}`,
-      `financeowner: ${checks.financeowner ? "mentionne" : "non trouve"}`,
-      `dq.lead: ${checks["dq.lead"] ? "mentionne" : "non trouve"}`,
-      `dpo: ${checks.dpo ? "mentionne" : "non trouve"}`
-    ];
-
-    evidenceBox.innerHTML = "";
-    const ul = document.createElement("ul");
-    ul.className = "scenario-steps";
-    lines.forEach((line) => {
-      const li = document.createElement("li");
-      li.textContent = line;
-      ul.appendChild(li);
-    });
-    evidenceBox.appendChild(ul);
-
-    if (Array.isArray(data.mdPreview) && data.mdPreview.length) {
-      const p = document.createElement("p");
-      p.className = "hint";
-      p.textContent = `Apercu preuve: ${data.mdPreview.slice(0, 2).join(" | ")}`;
-      evidenceBox.appendChild(p);
-    }
-  } catch (err) {
-    evidenceBox.textContent = `Erreur: ${err.message}`;
-  }
-}
-
-async function loadScenariosFromConfig() {
-  const config = await api("/api/scenarios/config");
-  const rawScenarios = config.scenarios || {};
-
-  scenarioModels = {
-    explorer: {
-      id: "explorer",
-      title: "Explorateur libre",
-      objective: "Mode generique pour tout besoin business hors scenario predefini.",
-      steps: [
-        "Saisir une recherche libre dans le catalogue.",
-        "Explorer Data Products et assets lies.",
-        "Utiliser les preuves si necessaire."
-      ],
-      say: "Je peux couvrir des cas metier non prevus initialement.",
-      backup: "Revenir a un scenario configure",
-      presets: [],
-      focus: "search"
-    }
-  };
-
-  Object.keys(rawScenarios).forEach((id) => {
-    scenarioModels[id] = createScenarioModel(id, rawScenarios[id]);
-  });
-
-  renderScenarioButtons();
-}
-
 searchForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const query = searchInput.value.trim();
-  if (!query) {
-    return;
-  }
   await runSearch(query);
 });
 
 objectFilters.addEventListener("change", async () => {
   const query = searchInput.value.trim();
-  if (!query) {
-    return;
-  }
   await runSearch(query);
 });
 
-loadEvidenceBtn.addEventListener("click", async () => {
-  await loadScenario4Evidence();
-});
-
 refreshBtn.addEventListener("click", async () => {
-  await Promise.all([loadOverview(), loadDataProducts(), loadReadiness()]);
-  const model = scenarioModels[activeScenarioId];
-  if (model && model.focus === "evidence") {
-    await loadScenario4Evidence();
-  }
-
-  const query = searchInput.value.trim();
-  if (query) {
-    await runSearch(query);
-  }
+  await Promise.all([loadDiscoveryTree(), runSearch(searchInput.value.trim())]);
 });
 
 (async function init() {
-  await loadScenariosFromConfig();
-  await Promise.all([loadOverview(), loadDataProducts(), loadReadiness()]);
-  await switchScenario("explorer");
-  searchInput.value = "Profitability Net Profit Margin";
-  await runSearch(searchInput.value);
+  await Promise.all([loadDiscoveryTree(), runSearch("")]);
 })();

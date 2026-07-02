@@ -51,7 +51,15 @@ $plan = @(
     @{ cde="Material Number";         col="material_id";      asset=$A_LAKEHOUSE;   domain=$D_OPS  },
     @{ cde="Asset Sensitivity Label"; col="sensitivity";      asset=$A_PURV_HUB;    domain=$D_TECH },
     @{ cde="Data Quality Score";      col="dq_score";         asset=$A_EXEC_REQ;    domain=$D_TECH },
-    @{ cde="Owner Email";             col="owner_email";      asset=$A_PURV_HUB;    domain=$D_TECH }
+    @{ cde="Owner Email";             col="owner_email";      asset=$A_PURV_HUB;    domain=$D_TECH },
+    @{ cde="Pipeline Conversion Rate"; col="pipeline_conversion_rate"; asset=$A_FACT_SALE;  domain=$D_CUST },
+    @{ cde="Discount Leakage";         col="discount_leakage";         asset=$A_FACT_SALE;  domain=$D_CUST },
+    @{ cde="Forecast Accuracy";        col="forecast_accuracy";        asset=$A_FACT_SALE;  domain=$D_CUST },
+    @{ cde="Sell-out Volume";          col="sell_out_volume";          asset=$A_FACT_SALE;  domain=$D_CUST },
+    @{ cde="Data Freshness SLA";       col="data_freshness_sla";       asset=$A_EXEC_REQ;   domain=$D_TECH },
+    @{ cde="DQ Rule Pass Rate";        col="dq_rule_pass_rate";        asset=$A_EXEC_REQ;   domain=$D_TECH },
+    @{ cde="KPI Top Opportunities";    col="kpi_top_opportunities";    asset=$A_EXEC_REQ;   domain=$D_CUST },
+    @{ cde="Sales";                    col="sales";                    asset=$A_EXEC_REQ;   domain=$D_CUST }
 )
 
 Write-Host "`n=== Creating CDCs + CDE relationships ===" -ForegroundColor Cyan

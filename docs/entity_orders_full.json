@@ -1,0 +1,845 @@
+{
+  "referredEntities": {
+    "040af482-eef1-477a-9f8d-f5f6f6f60002": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Unique order identifier (primary key). Integer. Referenced by LINEITEM.L_ORDERKEY. FR: Identifiant de commande unique (cle primaire). Reference par LINEITEM.L_ORDERKEY.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_ORDERKEY",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "O_ORDERKEY",
+        "length": 38,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60002",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323664689,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "67a91262-1714-4f19-92fc-8ad37c7c5581",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_ORDERKEY",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60001": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Free-text order comment. Contains notes about the order. FR: Commentaire libre sur la commande.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_COMMENT",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "O_COMMENT",
+        "length": 79,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60001",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323679082,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "fd81e3e4-bebb-4f8e-aa9c-29223609efb5",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_COMMENT",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60008": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Foreign key to CUSTOMER.C_CUSTKEY. Links order to the purchasing customer. Essential for customer-order joins and revenue-per-customer calculations. FR: Cle etrangere vers CUSTOMER.C_CUSTKEY. Essentiel pour les jointures client-commande et le calcul du revenu par client.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_CUSTKEY",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "O_CUSTKEY",
+        "length": 38,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60008",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323666398,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "51045a5e-6f0d-400c-90b9-ba227222a1ea",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_CUSTKEY",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60007": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Order fulfillment status. Values: F (Fulfilled), O (Open), P (Partially fulfilled). Used for order lifecycle tracking and fulfillment KPIs. FR: Statut de realisation : F (Terminee), O (Ouverte), P (Partiellement realisee). Utilise pour le suivi du cycle de vie des commandes.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_ORDERSTATUS",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "O_ORDERSTATUS",
+        "length": 1,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60007",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323668128,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "294c4c27-5230-48ef-8d8a-bcf55e33e54c",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_ORDERSTATUS",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60009": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Total order amount. Calculation: SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)) across all line items. Represents the net revenue including tax after discounts. FR: Montant total de la commande. Calcul : SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)) sur toutes les lignes. Revenu net taxes incluses apres remises.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_TOTALPRICE",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "O_TOTALPRICE",
+        "length": 12,
+        "description": "",
+        "scale": 2
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60009",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323669543,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [
+          {
+            "guid": "8cc7f354-6a65-430b-81ac-565d74790922",
+            "typeName": "AtlasGlossaryTerm",
+            "entityStatus": "ACTIVE",
+            "displayText": "Cash Flow",
+            "relationshipType": "AtlasGlossarySemanticAssignment",
+            "relationshipGuid": "fa97ef8b-0eb2-413e-b988-4e0ceaa96a60",
+            "relationshipStatus": "ACTIVE",
+            "relationshipAttributes": {
+              "typeName": "AtlasGlossarySemanticAssignment",
+              "attributes": {
+                "expression": null,
+                "createdBy": null,
+                "steward": null,
+                "confidence": null,
+                "description": null,
+                "source": null,
+                "status": null
+              }
+            }
+          },
+          {
+            "guid": "5d09b90d-0a33-4bef-b5db-7707b0ac17ca",
+            "typeName": "AtlasGlossaryTerm",
+            "entityStatus": "ACTIVE",
+            "displayText": "ARPU",
+            "relationshipType": "AtlasGlossarySemanticAssignment",
+            "relationshipGuid": "a4e01986-924d-4308-8df0-d6df78308f02",
+            "relationshipStatus": "ACTIVE",
+            "relationshipAttributes": {
+              "typeName": "AtlasGlossarySemanticAssignment",
+              "attributes": {
+                "expression": null,
+                "createdBy": null,
+                "steward": null,
+                "confidence": null,
+                "description": null,
+                "source": null,
+                "status": null
+              }
+            }
+          },
+          {
+            "guid": "9ae458ec-1baf-449d-9cf4-a2505086c4b4",
+            "typeName": "AtlasGlossaryTerm",
+            "entityStatus": "ACTIVE",
+            "displayText": "Net Revenue",
+            "relationshipType": "AtlasGlossarySemanticAssignment",
+            "relationshipGuid": "cf2c27b0-ad90-472c-bba3-63564732019e",
+            "relationshipStatus": "ACTIVE",
+            "relationshipAttributes": {
+              "typeName": "AtlasGlossarySemanticAssignment",
+              "attributes": {
+                "expression": null,
+                "createdBy": null,
+                "steward": null,
+                "confidence": null,
+                "description": null,
+                "source": null,
+                "status": null
+              }
+            }
+          }
+        ],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "c6a3fc1f-70ee-41eb-83ad-9a3e9ffb0911",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_TOTALPRICE",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60004": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Date the order was placed. DATE type. Used for time-series analysis, trend reporting, and fiscal period aggregation. FR: Date de la commande. Utilisee pour l'analyse temporelle, le reporting de tendances et l'agregation par periode fiscale.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_ORDERDATE",
+        "displayName": null,
+        "dataType": "DATE",
+        "isNull": false,
+        "name": "O_ORDERDATE",
+        "length": 0,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60004",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323671370,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "9f7f4d3a-b405-4765-a875-3cfe6214156f",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_ORDERDATE",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60003": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Order priority level. Values: 1-URGENT, 2-HIGH, 3-MEDIUM, 4-NOT SPECIFIED, 5-LOW. Drives fulfillment sequencing and SLA tracking. FR: Niveau de priorite : 1-URGENT, 2-HIGH, 3-MEDIUM, 4-NOT SPECIFIED, 5-LOW.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_ORDERPRIORITY",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "O_ORDERPRIORITY",
+        "length": 15,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60003",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323673773,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "136e1289-6a57-408b-8316-f8eadbd94378",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_ORDERPRIORITY",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60006": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Clerk who recorded the order. Format: 'Clerk#NNNNNNNNNN'. Used for sales rep performance tracking. FR: Commis ayant enregistre la commande. Utilise pour le suivi de performance des representants.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_CLERK",
+        "displayName": null,
+        "dataType": "TEXT",
+        "isNull": false,
+        "name": "O_CLERK",
+        "length": 15,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60006",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323675586,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "d106a4c3-faf1-469c-92fc-6a64d9c9802e",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_CLERK",
+      "proxy": false
+    },
+    "040af482-eef1-477a-9f8d-f5f6f6f60005": {
+      "typeName": "snowflake_table_column",
+      "attributes": {
+        "owner": null,
+        "replicatedTo": null,
+        "userDescription": "Shipping priority indicator. Integer value affecting delivery scheduling. Higher values indicate higher shipping priority. FR: Indicateur de priorite d'expedition. Valeur entiere affectant l'ordonnancement des livraisons.",
+        "replicatedFrom": null,
+        "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS/columns/O_SHIPPRIORITY",
+        "displayName": null,
+        "dataType": "NUMBER",
+        "isNull": false,
+        "name": "O_SHIPPRIORITY",
+        "length": 38,
+        "description": "",
+        "scale": 0
+      },
+      "guid": "040af482-eef1-477a-9f8d-f5f6f6f60005",
+      "isIncomplete": false,
+      "provenanceType": 0,
+      "status": "ACTIVE",
+      "createdBy": "ServiceAdmin",
+      "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createTime": 1712849171489,
+      "updateTime": 1780323677454,
+      "version": 0,
+      "isIndexed": true,
+      "sourceDetails": {
+        "userModifiedAttributes": [
+          "userDescription"
+        ]
+      },
+      "collectionId": "242twh",
+      "relationshipAttributes": {
+        "inputToProcesses": [],
+        "schema": [],
+        "sources": [],
+        "sinks": [],
+        "unique_constraints": [],
+        "attachedSchema": [],
+        "foreign_keys": [],
+        "meanings": [],
+        "table": {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+          "typeName": "snowflake_table",
+          "entityStatus": "ACTIVE",
+          "displayText": "ORDERS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "24ccfa5f-c28d-42be-a193-f718794f1d9b",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        "outputFromProcesses": []
+      },
+      "labels": [],
+      "displayText": "O_SHIPPRIORITY",
+      "proxy": false
+    }
+  },
+  "entity": {
+    "typeName": "snowflake_table",
+    "attributes": {
+      "owner": null,
+      "modifiedTime": 1697759162000,
+      "replicatedTo": null,
+      "userDescription": "Customer orders table from TPC-H benchmark (SF1). Contains 1.5 million order records with total price, order status, priority, and clerk assignment.\r\nPrimary key: O_ORDERKEY. Foreign key: O_CUSTKEY references CUSTOMER.\r\nCalculation: O_TOTALPRICE = SUM(L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX)) across all line items of the order.\r\n\r\nFR: Table des commandes clients (TPC-H SF1). 1,5M de commandes avec prix total, statut, priorite et affectation. Calcul : O_TOTALPRICE = somme de L_EXTENDEDPRICE * (1 - L_DISCOUNT) * (1 + L_TAX) sur toutes les lignes.",
+      "replicatedFrom": null,
+      "qualifiedName": "snowflake://https/databases/SNOWFLAKE_SAMPLE_DATA/schemas/TPCH_SF1/tables/ORDERS",
+      "displayName": null,
+      "name": "ORDERS",
+      "description": "Orders data as defined by TPC-H",
+      "type": "TABLE"
+    },
+    "lastModifiedTS": "18",
+    "guid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+    "isIncomplete": false,
+    "provenanceType": 0,
+    "status": "ACTIVE",
+    "createdBy": "ServiceAdmin",
+    "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+    "createTime": 1712849171489,
+    "updateTime": 1780326288773,
+    "version": 0,
+    "isIndexed": true,
+    "sourceDetails": {
+      "userModifiedAttributes": [
+        "userDescription"
+      ],
+      "__schemaModifiedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "__schemaModifiedTime": 1780323679082
+    },
+    "collectionId": "242twh",
+    "relationshipAttributes": {
+      "inputToProcesses": [],
+      "schema": [],
+      "dbSchema": {
+        "guid": "5cc46b54-c88d-4080-8422-0a9bc3ab8348",
+        "typeName": "snowflake_schema",
+        "entityStatus": "ACTIVE",
+        "displayText": "TPCH_SF1",
+        "relationshipType": "snowflake_schema_tables",
+        "relationshipGuid": "e18ef836-a061-4fe4-bfda-689bab336a36",
+        "relationshipStatus": "ACTIVE",
+        "relationshipAttributes": {
+          "typeName": "snowflake_schema_tables"
+        }
+      },
+      "sources": [],
+      "sinks": [],
+      "unique_constraints": [],
+      "attachedSchema": [],
+      "foreign_keys": [],
+      "table_columns": [
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60002",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_ORDERKEY",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "67a91262-1714-4f19-92fc-8ad37c7c5581",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60008",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_CUSTKEY",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "51045a5e-6f0d-400c-90b9-ba227222a1ea",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60007",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_ORDERSTATUS",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "294c4c27-5230-48ef-8d8a-bcf55e33e54c",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60009",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_TOTALPRICE",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "c6a3fc1f-70ee-41eb-83ad-9a3e9ffb0911",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60004",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_ORDERDATE",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "9f7f4d3a-b405-4765-a875-3cfe6214156f",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60003",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_ORDERPRIORITY",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "136e1289-6a57-408b-8316-f8eadbd94378",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60006",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_CLERK",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "d106a4c3-faf1-469c-92fc-6a64d9c9802e",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60005",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_SHIPPRIORITY",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "24ccfa5f-c28d-42be-a193-f718794f1d9b",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        },
+        {
+          "guid": "040af482-eef1-477a-9f8d-f5f6f6f60001",
+          "typeName": "snowflake_table_column",
+          "entityStatus": "ACTIVE",
+          "displayText": "O_COMMENT",
+          "relationshipType": "snowflake_table_table_columns",
+          "relationshipGuid": "fd81e3e4-bebb-4f8e-aa9c-29223609efb5",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "snowflake_table_table_columns"
+          }
+        }
+      ],
+      "meanings": [
+        {
+          "guid": "f4faffff-76f8-4dee-b7a8-3101a5402d92",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Opportunity",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "4724382e-fa0e-4fb1-9cb5-2e70d3330901",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "b26614f3-bcde-4077-ac3a-cfdded9ab6fe",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Win Rate",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "46c170ce-a91b-4a20-97d7-fa2a7ee6ed0f",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        },
+        {
+          "guid": "ceee41f2-f823-4b3b-9225-a3378daf7c00",
+          "typeName": "AtlasGlossaryTerm",
+          "entityStatus": "ACTIVE",
+          "displayText": "Sales Pipeline",
+          "relationshipType": "AtlasGlossarySemanticAssignment",
+          "relationshipGuid": "0e8d380a-98ff-4f82-b630-75e85d41ade1",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "AtlasGlossarySemanticAssignment",
+            "attributes": {
+              "expression": null,
+              "createdBy": null,
+              "steward": null,
+              "confidence": null,
+              "description": null,
+              "source": null,
+              "status": null
+            }
+          }
+        }
+      ],
+      "outputFromProcesses": []
+    },
+    "classifications": [
+      {
+        "typeName": "DQ_Gold",
+        "lastModifiedTS": "1",
+        "entityGuid": "040af482-eef1-477a-9f8d-f5f6f6f60000",
+        "entityStatus": "ACTIVE",
+        "createdBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+        "updatedBy": "6617cad6-d329-4361-951a-9eacbbaa8049",
+        "createTime": 1780326288773,
+        "updateTime": 1780326288773
+      }
+    ],
+    "labels": [],
+    "displayText": "ORDERS",
+    "proxy": false
+  }
+}

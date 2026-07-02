@@ -1,0 +1,62 @@
+{
+  "referredEntities": {},
+  "entity": {
+    "typeName": "salesforce_object",
+    "attributes": {
+      "owner": null,
+      "modifiedTime": 0,
+      "replicatedTo": null,
+      "userDescription": null,
+      "replicatedFrom": null,
+      "qualifiedName": "https://ASIMPLEUPLOAD.salesforce.com/Customer",
+      "displayName": null,
+      "name": "Salesforce Customer data",
+      "description": null
+    },
+    "lastModifiedTS": "2",
+    "guid": "eea7dfee-89a1-43fc-ab83-9cf6f6f60000",
+    "isIncomplete": false,
+    "provenanceType": 0,
+    "status": "ACTIVE",
+    "createdBy": "b239f754-726d-4331-b452-0155f65046fa",
+    "updatedBy": "b239f754-726d-4331-b452-0155f65046fa",
+    "createTime": 1712926159761,
+    "updateTime": 1712926160338,
+    "version": 0,
+    "isIndexed": true,
+    "sourceDetails": {
+      "__schemaModifiedBy": "b239f754-726d-4331-b452-0155f65046fa",
+      "__schemaModifiedTime": 1712926159761
+    },
+    "collectionId": "bpnc43",
+    "domainId": "pdedemopurv",
+    "relationshipAttributes": {
+      "inputToProcesses": [
+        {
+          "guid": "09817c3c-7f30-4d19-b133-f3fd090a634f",
+          "typeName": "Process",
+          "entityStatus": "ACTIVE",
+          "displayText": "API Management - Salesforce ",
+          "relationshipType": "dataset_process_inputs",
+          "relationshipGuid": "cd3f0d7b-b11b-4c1b-b574-f33824314326",
+          "relationshipStatus": "ACTIVE",
+          "relationshipAttributes": {
+            "typeName": "dataset_process_inputs"
+          }
+        }
+      ],
+      "schema": [],
+      "sources": [],
+      "sinks": [],
+      "unique_constraints": [],
+      "attachedSchema": [],
+      "foreign_keys": [],
+      "fields": [],
+      "meanings": [],
+      "outputFromProcesses": []
+    },
+    "labels": [],
+    "displayText": "Salesforce Customer data",
+    "proxy": false
+  }
+}

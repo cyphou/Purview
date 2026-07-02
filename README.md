@@ -6,6 +6,17 @@
 
 ---
 
+## 📊 Project Status
+
+**✅ Status**: Production Ready | **Latest Release**: v2.0.0 (June 2026)
+
+📍 **See [STATUS.md](STATUS.md)** for comprehensive project metrics, all sprints/UC features, deployment paths, and demo readiness checklist.
+
+**Quick Metrics**:
+- ✅ 16 domains | ✅ 75 glossary terms | ✅ 6 data products | ✅ 15 CDEs | ✅ 85+ relationships | ✅ 4 runnable demo scenarios
+
+---
+
 ## ✨ What This Deploys
 
 | Layer | What you get | Count |
@@ -124,6 +135,34 @@ Preparation only (without starting UI):
 ```powershell
 .\prepare_scenario_environment.ps1
 ```
+
+### Semantic Labs flow (Finance Report dataset)
+
+Use this when you want semantic-model depth (measures, relationships, roles, table/column metadata).
+
+Runtime note:
+- `semantic-link-labs` requires Python `<3.13`.
+- If your local machine is Python `3.13+`, run extraction in Fabric notebook and then import the JSON locally.
+- See `SEMANTIC_LABS_FABRIC_RUNBOOK.md`.
+
+1. Run extraction in a Fabric notebook (recommended):
+
+```python
+%pip install semantic-link-labs
+python semantic_labs_extract_finance_report.py --workspace "DDiB-FSI" --dataset "Finance Report" --out "/lakehouse/default/Files/finance_report_semantic_metadata.json"
+```
+
+2. Import the exported JSON into Purview metadata:
+
+```powershell
+.\import_semantic_labs_metadata_to_purview.ps1 -MetadataJsonPath "C:\path\finance_report_semantic_metadata.json"
+```
+
+Files:
+- `semantic_labs_extract_finance_report.py`
+- `import_semantic_labs_metadata_to_purview.ps1`
+- `requirements-semantic-labs.txt`
+- `Fabric_Notebooks/SemanticLabs_FinanceReport_Metadata.ipynb`
 
 ---
 

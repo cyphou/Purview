@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-06-01T20:58:00",
+  "generatedAt": "2026-06-02T10:14:13",
   "purviewAccount": "pdedemopurv",
   "scenarioCoverage": {
-    "scenario4": "Admin and adoption evidence generated",
     "scenario3": "Documentation and governance supported",
+    "scenario4": "Admin and adoption evidence generated",
     "scenario2": "Domain and data product exploration supported",
     "scenario1": "KPI understanding and lineage supported"
   },
   "catalog": {
+    "businessDomains": 30,
     "dataProducts": 15,
-    "terms": 100,
-    "objectives": 7,
-    "criticalDataElements": 19,
-    "businessDomains": 30
+    "objectives": 9,
+    "terms": 106,
+    "criticalDataElements": 25
   },
   "demoUsers": [
     {

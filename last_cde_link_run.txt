@@ -1,0 +1,163 @@
+Loaded 107 terms, 25 CDEs
+
+=== Part 1: Term-Term relationships ===
+  ok  Revenue -[Related]-> Enterprise Financial KPI
+  ok  EBITDA -[Related]-> Enterprise Financial KPI
+  ok  Net Income -[Related]-> Enterprise Financial KPI
+  ok  Carbon Footprint -[Related]-> ESG Disclosure Metric
+  ok  ESG Score -[Related]-> ESG Disclosure Metric
+  ok  CSRD Compliance -[Related]-> ESG Disclosure Metric
+  ok  Customer Lifetime Value -[Related]-> Customer Master Record
+  ok  Net Promoter Score -[Related]-> Customer Engagement Event
+  ok  Sales Pipeline -[Related]-> Sales Performance Indicator
+  ok  Lead Conversion Rate -[Related]-> Sales Performance Indicator
+  ok  Average Order Value -[Related]-> Sales Performance Indicator
+  FAIL Headcount -> Workforce Performance Indicator :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change Term in business domain 4aa514cd-48fd-4182-879e-0f51657986ae."
+  FAIL Turnover Rate -> Workforce Performance Indicator :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change Term in business domain 4aa514cd-48fd-4182-879e-0f51657986ae."
+  FAIL Employee ID -> Employee Master Record :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change Term in business domain ce3259a5-f701-4f4b-8937-c12f01cb57ab."
+  ok  Customer ID -[Synonym]-> Customer Master Record
+  ok  Customer Lifetime Value -[Related]-> Net Promoter Score
+  ok  Cost Center -[Related]-> Enterprise Financial KPI
+Term-Term: 14 ok / 0 skip / 3 fail
+
+=== Part 2: CDE -> Term relationships ===
+  ok  CDE[GL Account Number] -> Term[Cost Center]
+  ok  CDE[Fiscal Period] -> Term[Financial Reporting Period]
+  ok  CDE[Reporting Currency] -> Term[Enterprise Financial KPI]
+  ok  CDE[Customer Master ID] -> Term[Customer Master Record]
+  ok  CDE[Email Address (PII)] -> Term[Customer Engagement Event]
+  ok  CDE[Customer Lifetime Value] -> Term[Customer Lifetime Value]
+  FAIL CDE[Employee ID] -> Term[Employee Master Record] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain f64840cf-bac7-4d21-b43f
+  FAIL CDE[Compensation Band] -> Term[People Lifecycle Event] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain f64840cf-bac7-4d21-b43f
+  FAIL CDE[Cost Center] -> Term[Cost Center] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain f64840cf-bac7-4d21-b43f
+  FAIL CDE[Equipment ID] -> Term[Industrial Asset Identifier] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain 84f0ee4c-375b-4714-bd0d
+  FAIL CDE[Work Order Number] -> Term[Safety and Reliability Event] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain 84f0ee4c-375b-4714-bd0d
+  FAIL CDE[Material Number] -> Term[Industrial Asset Identifier] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain 84f0ee4c-375b-4714-bd0d
+  FAIL CDE[Asset Sensitivity Label] -> Term[Data Product Certification] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain 7f5695d1-8e2e-44f1-9c08
+  FAIL CDE[Data Quality Score] -> Term[Data Platform Health Indicator] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain 7f5695d1-8e2e-44f1-9c08
+  FAIL CDE[Owner Email] -> Term[Data Lineage Anchor] :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataElement in business domain 7f5695d1-8e2e-44f1-9c08
+CDE-Term: 6 ok / 0 skip / 9 fail
+
+=== Part 3: DataProduct -> CDE relationships ===
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[GL Account Number]
+  ok  DP[c5e22498-7d09-41b1-a059-3ae5398f7a49] -> CDE[GL Account Number]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Fiscal Period]
+  ok  DP[c5e22498-7d09-41b1-a059-3ae5398f7a49] -> CDE[Fiscal Period]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Reporting Currency]
+  ok  DP[c5e22498-7d09-41b1-a059-3ae5398f7a49] -> CDE[Reporting Currency]
+  ok  DP[dd58e805-6ac3-4566-b785-03fec789610c] -> CDE[Customer Master ID]
+  ok  DP[dd58e805-6ac3-4566-b785-03fec789610c] -> CDE[Email Address (PII)]
+  ok  DP[dd58e805-6ac3-4566-b785-03fec789610c] -> CDE[Customer Lifetime Value]
+  ok  DP[62ad4ddf-1042-49ec-a24e-1181cc737dad] -> CDE[Employee ID]
+  ok  DP[62ad4ddf-1042-49ec-a24e-1181cc737dad] -> CDE[Compensation Band]
+  ok  DP[62ad4ddf-1042-49ec-a24e-1181cc737dad] -> CDE[Cost Center]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Cost Center]
+  ok  DP[4302076b-110d-4344-85f7-3c41c34d0b82] -> CDE[Equipment ID]
+  ok  DP[4302076b-110d-4344-85f7-3c41c34d0b82] -> CDE[Work Order Number]
+  ok  DP[4302076b-110d-4344-85f7-3c41c34d0b82] -> CDE[Material Number]
+  ok  DP[2493e522-afff-4289-8595-1cf20c9db42d] -> CDE[Asset Sensitivity Label]
+  ok  DP[2493e522-afff-4289-8595-1cf20c9db42d] -> CDE[Data Quality Score]
+  ok  DP[2493e522-afff-4289-8595-1cf20c9db42d] -> CDE[Owner Email]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Pipeline Conversion Rate]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Discount Leakage]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Forecast Accuracy]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Sell-out Volume]
+  ok  DP[2493e522-afff-4289-8595-1cf20c9db42d] -> CDE[Data Freshness SLA]
+  ok  DP[2493e522-afff-4289-8595-1cf20c9db42d] -> CDE[DQ Rule Pass Rate]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[KPI Top Opportunities]
+  ok  DP[4baeadc4-224c-43be-93a5-819ed2fb9e97] -> CDE[Sales]
+DP-CDE: 27 ok / 0 skip / 0 fail
+
+========== Sprint UC-H complete ==========
+=== Existing CDCs: 25 ===
+
+=== Creating CDCs + CDE relationships ===
+
+-- GL Account Number -> Finance Report.account_id --
+  ok  CDC exists id=53e577c5-6d50-416c-b39c-dbd89bf8bcb7 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Fiscal Period -> dimension_date.fiscal_period --
+  ok  CDC exists id=780072ae-7b6b-47d2-86f2-7d19c3a5e7f9 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Reporting Currency -> fact_sale.currency_code --
+  ok  CDC exists id=bc15f41d-a0ce-4b5e-a9ff-c6125363a709 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Customer Master ID -> dimension_customer.customer_id --
+  ok  CDC exists id=b3a0f6f6-f7e7-4e23-a157-0bafe1ae66ec (skipping create)
+  ok  CDE -> CDC linked
+
+-- Email Address (PII) -> dimension_customer.email --
+  ok  CDC exists id=7c2bde0d-a786-4220-a8ae-7295d2605da3 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Customer Lifetime Value -> dimension_customer.ltv_score --
+  ok  CDC exists id=108d489e-2f8a-4dad-856d-26f75217d9bd (skipping create)
+  ok  CDE -> CDC linked
+
+-- Employee ID -> aggregate_sale_by_date_employee.employee_id --
+  ok  CDC exists id=b367024e-3e28-40ce-8b40-1cb88a2b3e8f (skipping create)
+
+-- Compensation Band -> aggregate_sale_by_date_employee.comp_band --
+  ok  CDC exists id=ffffd329-c5d3-4bfb-9f8d-844fcc734a0d (skipping create)
+
+-- Cost Center -> aggregate_sale_by_date_employee.cost_center --
+  ok  CDC exists id=488337fc-b69f-4064-a01a-286ff858c508 (skipping create)
+
+-- Equipment ID -> wwilakehouse-DirectLake.equipment_id --
+  ok  CDC exists id=21b314a9-7daf-4bc1-a432-972e44bdb023 (skipping create)
+
+-- Work Order Number -> wwilakehouse-DirectLake.work_order_id --
+  ok  CDC exists id=c6b9b133-e093-450f-bf88-be786d862cb6 (skipping create)
+
+-- Material Number -> wwilakehouse-DirectLake.material_id --
+  ok  CDC exists id=e81d85e3-3386-4d3f-ace4-9371803d6ee2 (skipping create)
+
+-- Asset Sensitivity Label -> Purview Hub.sensitivity --
+  ok  CDC exists id=d10060bf-caec-4ed7-8af1-01f80eaf0044 (skipping create)
+
+-- Data Quality Score -> exec_requests_history.dq_score --
+  ok  CDC exists id=b756783b-57bd-4bcd-b1df-52d3beff04cb (skipping create)
+
+-- Owner Email -> Purview Hub.owner_email --
+  ok  CDC exists id=1e4277ae-8fc6-4944-bcc0-c03ac7286ff1 (skipping create)
+
+-- Pipeline Conversion Rate -> fact_sale.pipeline_conversion_rate --
+  ok  CDC exists id=5848f49f-1c2d-4482-b6d6-faccf4791fad (skipping create)
+  ok  CDE -> CDC linked
+
+-- Discount Leakage -> fact_sale.discount_leakage --
+  ok  CDC exists id=e5dd9717-6e57-4d9f-be30-24ae57bf37fa (skipping create)
+  ok  CDE -> CDC linked
+
+-- Forecast Accuracy -> fact_sale.forecast_accuracy --
+  ok  CDC exists id=57e6f557-05d1-457d-869b-9ce94bc23158 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Sell-out Volume -> fact_sale.sell_out_volume --
+  ok  CDC exists id=a411e47e-b738-4eb1-a740-74530b53d2de (skipping create)
+  ok  CDE -> CDC linked
+
+-- Data Freshness SLA -> fact_sale.data_freshness_sla --
+  FAIL CDC :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataColumn in business domain 7f5695d1-8e2e-44f1-9c08-5c1e2455cee7.","details":null,
+
+-- DQ Rule Pass Rate -> fact_sale.dq_rule_pass_rate --
+  FAIL CDC :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataColumn in business domain 7f5695d1-8e2e-44f1-9c08-5c1e2455cee7.","details":null,
+
+-- KPI Top Opportunities -> exec_requests_history.kpi_top_opportunities --
+  ok  CDC exists id=0f1fa305-fea8-4b08-83d6-292843cf9e7d (skipping create)
+  ok  CDE -> CDC linked
+
+-- Sales -> exec_requests_history.sales --
+  ok  CDC exists id=b0ac2a80-9a36-4eee-9006-4168f45f5369 (skipping create)
+  ok  CDE -> CDC linked
+
+========== Summary ==========
+CDCs created:     21 / 23
+CDE->CDC links:   12
+Failures:         2
+
+Total CriticalDataColumns in catalog: 25
+Sample CDE 'Customer Master ID' has 1 CDC relationship(s)

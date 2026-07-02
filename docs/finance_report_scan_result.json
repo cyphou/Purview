@@ -1,0 +1,961 @@
+{
+  "id": "7000dcc5-3063-4dc7-99f5-965d551c2083",
+  "name": "DDiB-FSI",
+  "type": "Workspace",
+  "state": "Active",
+  "dataRetrievalState": "UpstreamLineageErrors",
+  "isOnDedicatedCapacity": true,
+  "capacityId": "51BF4E53-DDF9-443C-923E-82605D3A32B1",
+  "defaultDatasetStorageFormat": "Small",
+  "Lakehouse": [
+    {
+      "id": "8bb51eb0-5507-46c3-8b08-676acacd88e1",
+      "name": "SemanticLabsOutput",
+      "description": null,
+      "state": "Active",
+      "lastUpdatedDate": "2026-06-02T11:47:18.6986615",
+      "createdDate": "2026-06-02T11:47:02.1188339",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "extendedProperties": {
+        "OneLakeTablesPath": "https://onelake.dfs.fabric.microsoft.com/7000dcc5-3063-4dc7-99f5-965d551c2083/8bb51eb0-5507-46c3-8b08-676acacd88e1/Tables",
+        "OneLakeFilesPath": "https://onelake.dfs.fabric.microsoft.com/7000dcc5-3063-4dc7-99f5-965d551c2083/8bb51eb0-5507-46c3-8b08-676acacd88e1/Files",
+        "DwProperties": "{\"tdsEndpoint\":\"xhlpuk7wrauudjqpiv52x4auta-yxoaa4ddgddu3gpvszovkhbaqm.datawarehouse.fabric.microsoft.com\",\"id\":\"23248d06-30cf-4045-b413-2c25b6777c63\",\"provisioningStatus\":\"Success\"}"
+      }
+    }
+  ],
+  "Notebook": [
+    {
+      "id": "76a29990-3e0c-4532-bbbd-a14ce1e5e489",
+      "name": "SemanticLabs_FinanceReport_Extract_20260602_1346",
+      "description": null,
+      "state": "Active",
+      "lastUpdatedDate": "2026-06-02T12:00:22.9628379",
+      "createdDate": "2026-06-02T11:46:50.1691959",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "extendedProperties": {}
+    }
+  ],
+  "reports": [
+    {
+      "reportType": "PowerBIReport",
+      "id": "fb3505a1-4147-4cc7-9843-6d095b786723",
+      "name": "Chief Risk Officer After Dashboard Realtime",
+      "datasetId": "5cb2d7b5-d30f-4991-875d-da12baada694",
+      "createdDateTime": "2023-01-11T08:22:28.377",
+      "modifiedDateTime": "2023-01-11T09:13:25.687",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "f3212a0d-8aaf-4289-9841-03e9f71fc68e",
+      "name": "Chief Risk Officer Realtime",
+      "datasetId": "48ddd733-67b7-41f9-ac75-20f5a75a7d86",
+      "createdDateTime": "2023-01-11T08:22:35.96",
+      "modifiedDateTime": "2023-01-11T09:13:33.323",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "74c69ae2-ef99-4fbf-8255-c5f42e6e3d54",
+      "name": "Company Insight KPIs",
+      "datasetId": "78667fe0-9aba-41f0-8d4e-00f0267ac951",
+      "createdDateTime": "2023-01-11T08:22:43.07",
+      "modifiedDateTime": "2023-01-11T09:13:39.67",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "58781ac8-452e-4feb-aa74-b0ce4fa97cfa",
+      "name": "ESG Metrics for Woodgrove",
+      "datasetId": "34865cf1-7761-4d04-995d-891d5398769f",
+      "createdDateTime": "2023-01-11T08:22:53.583",
+      "modifiedDateTime": "2023-01-11T09:13:49.007",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "f48def5e-395a-4007-9c6d-b596e9074263",
+      "name": "ESG Report Synapse Import Mode",
+      "datasetId": "c1f9032d-f262-4a78-9ef9-3962ff95c2b2",
+      "createdDateTime": "2023-01-11T08:23:01.76",
+      "modifiedDateTime": "2023-01-11T09:13:55.76",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "77c431f3-fe78-4b8a-acbc-03a11f141eb7",
+      "name": "ESGDashboardV2_KPIandGraphs",
+      "datasetId": "451ea347-1821-49b1-8857-ebf77a875d73",
+      "createdDateTime": "2023-01-11T08:23:09.557",
+      "modifiedDateTime": "2023-01-11T09:14:01.547",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "7442e585-ee82-446d-85c6-fd019fa2f76e",
+      "name": "FarmBeats Analytics",
+      "datasetId": "8ad772e5-d127-4989-84c4-a0bfa3cc919d",
+      "createdDateTime": "2023-01-11T08:27:17.09",
+      "modifiedDateTime": "2023-01-11T09:14:06.97",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "73142231-1b8f-42c3-9c91-430d8cc0315b",
+      "name": "Finance Report",
+      "datasetId": "6b2e4d57-5492-4d99-85ec-1d23560b58a4",
+      "createdDateTime": "2023-01-11T08:23:26.483",
+      "modifiedDateTime": "2026-06-02T12:00:09.877",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "39549a68-1a99-4157-8cc5-ec61b9483c12",
+      "name": "FSI CCO Dashboard",
+      "datasetId": "eb14fb06-42a3-4455-a9d1-58a8b9f6c14c",
+      "createdDateTime": "2023-01-11T08:23:34.217",
+      "modifiedDateTime": "2023-01-11T09:14:21.2",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "32d1405e-0b75-4213-a138-0ec9141edf3e",
+      "name": "FSI CCO Realtime Before",
+      "datasetId": "91dc7487-20a0-42d1-9314-c485d95c309f",
+      "createdDateTime": "2023-01-11T08:23:40.63",
+      "modifiedDateTime": "2023-01-11T09:14:26.133",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "2fe8fec6-1787-49c4-97f4-ad8cca2f29bb",
+      "name": "FSI CEO Dashboard",
+      "datasetId": "a9c975f4-aa1a-45b7-8a87-33f34e8615da",
+      "createdDateTime": "2023-01-11T08:24:08.32",
+      "modifiedDateTime": "2023-01-11T09:14:34.28",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "f13fd039-4125-486b-8786-36fc1f6781c8",
+      "name": "FSI HTAP",
+      "datasetId": "09e4af56-0e20-4e1c-95ae-e7443a7c7008",
+      "createdDateTime": "2023-01-11T08:23:56.23",
+      "modifiedDateTime": "2023-01-11T09:14:41.39",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "c83ba281-458a-42e2-a106-508ae1a53c66",
+      "name": "FSI Incident Report",
+      "datasetId": "18ec2245-dcdc-40af-82c8-cdc903232c43",
+      "createdDateTime": "2023-01-11T08:24:07.007",
+      "modifiedDateTime": "2023-01-11T09:14:46.827",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "2140c70a-51ea-49e8-ae89-97e512dec3e7",
+      "name": "FSI Predictive Analytics",
+      "datasetId": "e228e309-64f9-4ed4-b761-261b6de6d058",
+      "createdDateTime": "2023-01-11T08:24:13.633",
+      "modifiedDateTime": "2023-01-11T09:14:56.69",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "46d9acf0-fd89-4398-8b6d-057e0878abcb",
+      "name": "FSI Realtime KPI",
+      "datasetId": "1ed6ecae-b53f-4486-a94c-34c566f11738",
+      "createdDateTime": "2023-01-11T08:24:21.45",
+      "modifiedDateTime": "2023-01-11T09:14:58.44",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "188f52e3-4ef0-4043-a624-cd34f023c536",
+      "name": "FSI-Chicklets",
+      "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd",
+      "createdDateTime": "2023-01-11T08:24:29.093",
+      "modifiedDateTime": "2023-01-11T09:15:08.027",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "d68e57c4-9bff-4da0-b4b9-cdd0abcfa7df",
+      "name": "FSITwitterreport",
+      "datasetId": "02970ba4-c812-4bce-aff0-edb3baa46384",
+      "createdDateTime": "2023-01-11T08:24:37.73",
+      "modifiedDateTime": "2023-01-11T09:15:12.607",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "72615f62-a4a8-431b-a419-aaab1020f2af",
+      "name": "Geospatial Fraud Detection Miami",
+      "datasetId": "3847926a-fb70-4ea0-b029-d792ff9c17b0",
+      "createdDateTime": "2023-01-11T08:24:50.29",
+      "modifiedDateTime": "2023-01-11T09:15:19.147",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "13083fcc-34b7-4b1f-995a-66ecf394e89c",
+      "name": "Global overview tiles",
+      "datasetId": "cd6539f6-173d-49d2-b8bf-ab2ef34c4ffe",
+      "createdDateTime": "2023-01-11T08:24:51.583",
+      "modifiedDateTime": "2023-01-11T09:15:23.567",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "7f0e3e1b-9de0-46bd-a40f-be1960a73978",
+      "name": "globalmarkets",
+      "datasetId": "dd650c1b-8291-43fb-b333-04dcaa2e684f",
+      "createdDateTime": "2023-01-11T08:28:24.14",
+      "modifiedDateTime": "2023-01-11T09:15:32.91",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "249ad646-b9f8-439e-a07f-c8a5eac6d9e4",
+      "name": "Group Chief Risk Officer",
+      "datasetId": "bc896be2-da5f-4191-8ac2-41a1cf622d3d",
+      "createdDateTime": "2023-01-11T08:25:09.62",
+      "modifiedDateTime": "2023-01-11T09:15:39.003",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "5473dfc0-7503-40ae-a2c3-2e614215e92c",
+      "name": "Head of Financial Intelligence After Dashboard Realtime",
+      "datasetId": "95ea800c-85fb-42ad-ac7f-906cec24306b",
+      "createdDateTime": "2023-01-11T08:25:17.23",
+      "modifiedDateTime": "2023-01-11T09:15:44.227",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "91b211dc-32ee-46c1-85b9-5bc62e9d90f4",
+      "name": "Head of Financial Intelligence Realtime",
+      "datasetId": "c39838e3-c54e-4c70-b79f-aeb6bf9d14d7",
+      "createdDateTime": "2023-01-11T08:25:24.707",
+      "modifiedDateTime": "2023-01-11T09:15:51.113",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "05219b6a-0bd9-4104-9fdc-b8ec3adad7cc",
+      "name": "Head of Financial Intelligence",
+      "datasetId": "3a1e444d-d16e-4e5a-a183-bb6fad1cffad",
+      "createdDateTime": "2023-01-11T08:25:32.94",
+      "modifiedDateTime": "2023-01-11T09:15:59.217",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "bd7936d5-2033-4081-a6c5-d053e14930bb",
+      "name": "Master Images for FSI Dashboardpbix_v2",
+      "datasetId": "d8290f7d-a51c-4c0b-b2e7-3aa64ae3ff1e",
+      "createdDateTime": "2023-01-11T08:25:40.977",
+      "modifiedDateTime": "2023-01-11T09:16:05.72",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    },
+    {
+      "reportType": "PowerBIReport",
+      "id": "d182dfe7-ce49-4b7a-96f7-f3e81bffe483",
+      "name": "US Map with header",
+      "datasetId": "f9eac3c1-5f62-417c-abd6-0833ff44f148",
+      "createdDateTime": "2023-01-11T08:25:48.44",
+      "modifiedDateTime": "2023-01-11T09:16:11.79",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "createdBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "createdById": "6617cad6-d329-4361-951a-9eacbbaa8049"
+    }
+  ],
+  "dashboards": [
+    {
+      "id": "075aaf62-51ab-4dec-9bc8-f56cd4459ab2",
+      "displayName": "Chief Customer Officer Before",
+      "isReadOnly": false,
+      "tiles": [
+        {
+          "id": "4ae9d36f-f47f-4584-bf88-6d1ec1fc3fac",
+          "title": "Awareness - Number of Relevant Articles",
+          "reportId": "39549a68-1a99-4157-8cc5-ec61b9483c12",
+          "datasetId": "eb14fb06-42a3-4455-a9d1-58a8b9f6c14c"
+        },
+        {
+          "id": "597cd543-dbb0-4b3c-afd2-862e5f1f07b0",
+          "title": "Awareness - Number of Relevant Articles",
+          "reportId": "39549a68-1a99-4157-8cc5-ec61b9483c12",
+          "datasetId": "eb14fb06-42a3-4455-a9d1-58a8b9f6c14c"
+        },
+        {
+          "id": "30eb97d2-07c3-4e3a-85f0-931f27c6a7d9",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "f3480d8c-478e-4c27-813c-06acdaac86db",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "8506aef3-26d4-4ae2-b455-04155d3c1332",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "3ac3f739-978f-4b83-b26c-4c8cc69b9927",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "1c1940fd-2214-4553-9e9a-879840532d58",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "5cc3e417-2e0a-4bc9-abca-d04cf6ddd166",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "fc2dc372-6e50-45ae-8343-8ad9542ca160",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "ea737a22-87bd-4036-9502-4cdd1099f10f",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "9bb7c3c3-1138-4927-8785-72f566c37434",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        },
+        {
+          "id": "f9c04d8f-604d-4dca-83cd-c0a34984a48d",
+          "title": " ",
+          "reportId": "188f52e3-4ef0-4043-a624-cd34f023c536",
+          "datasetId": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd"
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "id": "cc085d0f-433b-4c07-9aa3-bb00bb09339f",
+      "name": "Before-scenario-cco-dataset",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-10T16:26:36.023",
+      "contentProviderType": "RealTimeInPushMode",
+      "schemaRetrievalError": "Unsupported request. RealTime dataset are not supported."
+    },
+    {
+      "id": "745e346f-45c7-4509-b9f4-130a10a95f4d",
+      "name": "Before-scenario-financial-hcrr-dataset",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-10T16:30:48.153",
+      "contentProviderType": "RealTimeInPushMode",
+      "schemaRetrievalError": "Unsupported request. RealTime dataset are not supported."
+    },
+    {
+      "id": "44e3ebaf-c110-4bd0-8a0f-b83d1ba29ef5",
+      "name": "Before-after-scenario-group-ceo-dataset",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-10T16:38:56.677",
+      "contentProviderType": "RealTimeInPushMode",
+      "schemaRetrievalError": "Unsupported request. RealTime dataset are not supported."
+    },
+    {
+      "id": "2c089551-f8c8-474d-b795-1b48a7bf9e28",
+      "name": "After-scenario-financial-hcrr-dataset",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-10T16:39:47.413",
+      "contentProviderType": "RealTimeInStreamingMode",
+      "schemaRetrievalError": "Unsupported request. RealTime dataset are not supported."
+    },
+    {
+      "id": "5cb2d7b5-d30f-4991-875d-da12baada694",
+      "name": "Chief Risk Officer After Dashboard Realtime",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:22:27.32",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "f2c38d64-f609-4502-ad35-9d82c4c99925"
+        }
+      ]
+    },
+    {
+      "id": "48ddd733-67b7-41f9-ac75-20f5a75a7d86",
+      "name": "Chief Risk Officer Realtime",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:22:35.06",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "96d9d0c4-2f6f-4b24-ab29-afea253ac0d8"
+        }
+      ]
+    },
+    {
+      "id": "78667fe0-9aba-41f0-8d4e-00f0267ac951",
+      "name": "Company Insight KPIs",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "directQueryRefreshSchedule": {
+        "frequency": 60,
+        "days": [],
+        "times": [],
+        "localTimeZoneId": "UTC"
+      },
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:22:42.187",
+      "contentProviderType": "PbixInDirectQueryMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "34865cf1-7761-4d04-995d-891d5398769f",
+      "name": "ESG Metrics for Woodgrove",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:22:52.553",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "c1f9032d-f262-4a78-9ef9-3962ff95c2b2",
+      "name": "ESG Report Synapse Import Mode",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:00.857",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "451ea347-1821-49b1-8857-ebf77a875d73",
+      "name": "ESGDashboardV2_KPIandGraphs",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:08.83",
+      "contentProviderType": "PbixInImportMode"
+    },
+    {
+      "id": "8ad772e5-d127-4989-84c4-a0bfa3cc919d",
+      "name": "FarmBeats Analytics",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:15.717",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "adbba33c-96b5-455e-8350-26d09832832d"
+        },
+        {
+          "datasourceInstanceId": "5313d069-91bb-4fcb-8d7c-368104710be9"
+        },
+        {
+          "datasourceInstanceId": "5ff6ccb3-6d2e-4da4-9ee4-ccf2df592340"
+        }
+      ]
+    },
+    {
+      "id": "6b2e4d57-5492-4d99-85ec-1d23560b58a4",
+      "name": "Finance Report",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:25.337",
+      "contentProviderType": "PbixInImportMode",
+      "endorsementDetails": {
+        "endorsement": "Promoted"
+      },
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "eb14fb06-42a3-4455-a9d1-58a8b9f6c14c",
+      "name": "FSI CCO Dashboard",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:33.347",
+      "contentProviderType": "PbixInCompositeMode",
+      "endorsementDetails": {
+        "endorsement": "Promoted"
+      },
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "91dc7487-20a0-42d1-9314-c485d95c309f",
+      "name": "FSI CCO Realtime Before",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:39.813",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "96d9d0c4-2f6f-4b24-ab29-afea253ac0d8"
+        }
+      ]
+    },
+    {
+      "id": "a9c975f4-aa1a-45b7-8a87-33f34e8615da",
+      "name": "FSI CEO Dashboard",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:47.607",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "09e4af56-0e20-4e1c-95ae-e7443a7c7008",
+      "name": "FSI HTAP",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:23:55.277",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "18ec2245-dcdc-40af-82c8-cdc903232c43",
+      "name": "FSI Incident Report",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:02.51",
+      "contentProviderType": "PbixInImportMode",
+      "endorsementDetails": {
+        "endorsement": "Promoted"
+      },
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "e228e309-64f9-4ed4-b761-261b6de6d058",
+      "name": "FSI Predictive Analytics",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:12.7",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "1ed6ecae-b53f-4486-a94c-34c566f11738",
+      "name": "FSI Realtime KPI",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:20.677",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "96d9d0c4-2f6f-4b24-ab29-afea253ac0d8"
+        }
+      ]
+    },
+    {
+      "id": "1e06eb34-47d2-40ab-a4ea-d7d18eb9d4bd",
+      "name": "FSI-Chicklets",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:28.243",
+      "contentProviderType": "PbixInImportMode"
+    },
+    {
+      "id": "02970ba4-c812-4bce-aff0-edb3baa46384",
+      "name": "FSITwitterreport",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:36.827",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "33c82ab1-ccb9-4410-a507-8c205139c1e2"
+        }
+      ]
+    },
+    {
+      "id": "3847926a-fb70-4ea0-b029-d792ff9c17b0",
+      "name": "Geospatial Fraud Detection Miami",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:44.13",
+      "contentProviderType": "PbixInImportMode",
+      "endorsementDetails": {
+        "endorsement": "Promoted"
+      },
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "cd6539f6-173d-49d2-b8bf-ab2ef34c4ffe",
+      "name": "Global overview tiles",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:24:50.797",
+      "contentProviderType": "PbixInImportMode"
+    },
+    {
+      "id": "dd650c1b-8291-43fb-b333-04dcaa2e684f",
+      "name": "globalmarkets",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:00.447",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "bc896be2-da5f-4191-8ac2-41a1cf622d3d",
+      "name": "Group Chief Risk Officer",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:08.627",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "95ea800c-85fb-42ad-ac7f-906cec24306b",
+      "name": "Head of Financial Intelligence After Dashboard Realtime",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:16.37",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "f2c38d64-f609-4502-ad35-9d82c4c99925"
+        }
+      ]
+    },
+    {
+      "id": "c39838e3-c54e-4c70-b79f-aeb6bf9d14d7",
+      "name": "Head of Financial Intelligence Realtime",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:23.86",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "96d9d0c4-2f6f-4b24-ab29-afea253ac0d8"
+        }
+      ]
+    },
+    {
+      "id": "3a1e444d-d16e-4e5a-a183-bb6fad1cffad",
+      "name": "Head of Financial Intelligence",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:32.03",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    },
+    {
+      "id": "d8290f7d-a51c-4c0b-b2e7-3aa64ae3ff1e",
+      "name": "Master Images for FSI Dashboardpbix_v2",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:40.297",
+      "contentProviderType": "PbixInImportMode"
+    },
+    {
+      "id": "f9eac3c1-5f62-417c-abd6-0833ff44f148",
+      "name": "US Map with header",
+      "tables": [],
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "isEffectiveIdentityRequired": false,
+      "isEffectiveIdentityRolesRequired": false,
+      "targetStorageMode": "Abf",
+      "createdDate": "2023-01-11T08:25:47.713",
+      "contentProviderType": "PbixInImportMode",
+      "datasourceUsages": [
+        {
+          "datasourceInstanceId": "3f6da248-ceb7-47e2-a8cf-dc4388c87916"
+        }
+      ]
+    }
+  ],
+  "dataflows": [],
+  "datamarts": [],
+  "SQLAnalyticsEndpoint": [
+    {
+      "id": "23248d06-30cf-4045-b413-2c25b6777c63",
+      "name": "SemanticLabsOutput",
+      "configuredBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "configuredById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "modifiedBy": "admin@MngEnvMCAP965390.onmicrosoft.com",
+      "modifiedById": "6617cad6-d329-4361-951a-9eacbbaa8049",
+      "modifiedDateTime": "2026-06-02T11:47:17.5078217",
+      "relations": [
+        {
+          "dependentOnArtifactId": "8bb51eb0-5507-46c3-8b08-676acacd88e1",
+          "workspaceId": "7000dcc5-3063-4dc7-99f5-965d551c2083",
+          "relationType": "CascadeDelete",
+          "settingsList": "CascadeDelete",
+          "usage": "None"
+        }
+      ]
+    }
+  ]
+}

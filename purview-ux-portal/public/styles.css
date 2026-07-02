@@ -92,20 +92,16 @@ h1 {
   animation: rise 0.5s ease both;
 }
 
-.metrics {
-  grid-column: span 12;
-}
-
-.guide-panel {
+.search-pane {
   grid-column: span 6;
 }
 
-.scenario-pane {
-  grid-column: span 6;
+.tree-pane {
+  grid-column: span 3;
 }
 
-.storyboard {
-  grid-column: span 12;
+.details-pane {
+  grid-column: span 3;
 }
 
 .scenario-nav {
@@ -313,10 +309,61 @@ h1 {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 330px;
+  max-height: 420px;
   overflow: auto;
   display: grid;
   gap: 8px;
+}
+
+.tree {
+  display: grid;
+  gap: 8px;
+  max-height: 620px;
+  overflow: auto;
+}
+
+.tree-section {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fcfffd;
+  padding: 6px 8px;
+}
+
+.tree-section summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #1b3f31;
+}
+
+.tree-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 5px;
+}
+
+.tree-item {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 6px 8px;
+  background: #fff;
+  color: #173a2d;
+  cursor: pointer;
+}
+
+.tree-item:hover {
+  background: #f4fbf7;
+}
+
+.details-box {
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: #fbfefc;
 }
 
 .result-list li {
@@ -403,10 +450,9 @@ h1 {
     flex-direction: column;
   }
 
-  .guide-panel,
-  .scenario-pane,
-  .storyboard,
-  .metrics {
+  .search-pane,
+  .tree-pane,
+  .details-pane {
     grid-column: span 12;
   }
 

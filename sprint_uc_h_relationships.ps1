@@ -103,8 +103,8 @@ foreach ($m in $cdeToTerm) {
 Write-Host "CDE-Term: $ok ok / $skip skip / $fail fail"
 
 # =========================================================================
-# Part 3: DataProduct -> CDE  (entityType=CriticalDataElement)
-# Note: CDE -> DP direction is not allowed (CDE only accepts Term/DataColumn/CriticalDataColumn).
+# Part 3: DataProduct -> CDE  (entityType=DataProduct)
+# Note: link from the DataProduct side so the CDE page surfaces the product association.
 # =========================================================================
 Write-Host "`n=== Part 3: DataProduct -> CDE relationships ===" -ForegroundColor Cyan
 $dpExec    = "4baeadc4-224c-43be-93a5-819ed2fb9e97"  # Executive Financial Dashboards
@@ -128,14 +128,22 @@ $cdeToDp = @(
     @{ cde="Material Number";         dps=@($dpOps) },
     @{ cde="Asset Sensitivity Label"; dps=@($dpHealth) },
     @{ cde="Data Quality Score";      dps=@($dpHealth) },
-    @{ cde="Owner Email";             dps=@($dpHealth) }
+    @{ cde="Owner Email";             dps=@($dpHealth) },
+    @{ cde="Pipeline Conversion Rate"; dps=@($dpExec) },
+    @{ cde="Discount Leakage";         dps=@($dpExec) },
+    @{ cde="Forecast Accuracy";        dps=@($dpExec) },
+    @{ cde="Sell-out Volume";          dps=@($dpExec) },
+    @{ cde="Data Freshness SLA";       dps=@($dpHealth) },
+    @{ cde="DQ Rule Pass Rate";        dps=@($dpHealth) },
+    @{ cde="KPI Top Opportunities";    dps=@($dpExec) },
+    @{ cde="Sales";                    dps=@($dpExec) }
 )
 $ok=0; $skip=0; $fail=0
 foreach ($m in $cdeToDp) {
     $cId = $cMap[$m.cde]
     if (-not $cId) { Write-Host "  SKIP missing CDE: $($m.cde)" -ForegroundColor Yellow; $skip++; continue }
     foreach ($dpId in $m.dps) {
-        $r = Invoke-Rel "dataproducts/$dpId" "CriticalDataElement" "Related" $cId
+        $r = Invoke-Rel "dataproducts/$dpId" "DataProduct" "Related" $cId
         if ($r.Code -in 200,201,409) {
             Write-Host "  ok  DP[$dpId] -> CDE[$($m.cde)]" -ForegroundColor Green; $ok++
         } else {

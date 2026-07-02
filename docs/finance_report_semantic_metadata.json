@@ -1,0 +1,914 @@
+{
+  "source": "live-fabric-semantic-model",
+  "generatedAtUtc": "2026-06-02T12:13:42.5824751Z",
+  "workspace": "DDiB-FSI",
+  "dataset": "Finance Report",
+  "tables": [
+    {
+      "name": "DateTableTemplate_65c10c54-0d8a-4700-89d5-02d5c0cd375c",
+      "description": "Live semantic model table from Finance Report with 7 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Date",
+          "description": "Live semantic model column from Finance Report. DataType=DateTime",
+          "dataType": "DateTime",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Year",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "MonthNo",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Month",
+          "description": "Live semantic model column from Finance Report. DataType=String; Calculated=true",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "QuarterNo",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Quarter",
+          "description": "Live semantic model column from Finance Report. DataType=String; Calculated=true",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Day",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": [
+        {
+          "name": "Date Hierarchy",
+          "description": "",
+          "levels": [
+            {
+              "name": "Year",
+              "column": "Year"
+            },
+            {
+              "name": "Quarter",
+              "column": "Quarter"
+            },
+            {
+              "name": "Month",
+              "column": "Month"
+            },
+            {
+              "name": "Day",
+              "column": "Day"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ConflictofInterest",
+      "description": "Live semantic model table from Finance Report with 11 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "FiscalYear-Quarter",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Fiscal Year",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Fiscal Quarter",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Region",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Required",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Complete",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Survey NC",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Incomplete",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Function Summary",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Complete %",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "Country",
+      "description": "Live semantic model table from Finance Report with 3 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "ID",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Region",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "FP&A",
+      "description": "Live semantic model table from Finance Report with 7 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Fiscal Year",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Fiscal Quarter",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Fiscal Month",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Forecast",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Budget",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Actual",
+          "description": "Live semantic model column from Finance Report. DataType=Double",
+          "dataType": "Double",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "OperatingExpenses",
+      "description": "Live semantic model table from Finance Report with 12 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Class",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Function Summary",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Line Item",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "P&L Classification",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "VTB (%)",
+          "description": "Live semantic model column from Finance Report. DataType=Double",
+          "dataType": "Double",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Actual ($)",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Budget ($)",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "VTB ($)",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "YoY ($)",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Channel",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Region",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "Sales",
+      "description": "Live semantic model table from Finance Report with 19 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Fiscal Year",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Fiscal Quarter",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Fiscal Month",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Region",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Customer Segment",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Product Line",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Product",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Product Category",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Interest and Fee Income",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Budget",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Forecast",
+          "description": "Live semantic model column from Finance Report. DataType=Double",
+          "dataType": "Double",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Discount",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Net Sales",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "COGS",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Gross Profit",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Half Yearly",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "VTB ($)",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "VTB (%)",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "SalesVsExpense",
+      "description": "Live semantic model table from Finance Report with 2 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Accounting Head",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Amount",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "SiteSecurity",
+      "description": "Live semantic model table from Finance Report with 17 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "FiscalQuarter",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "FiscalYear",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "FiscalMonth",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Region",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Phase",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Total Vulnerabilities",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Total Open Vulnerabilities",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Status",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Data Classification",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "App Scan High Risk",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "App Scan Low Risk",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Host Scan high Risk",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Host Scan Low Risk",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Active Sites Not Scanned",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Site Status",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Total Vuln",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "Travel&Entertainment",
+      "description": "Live semantic model table from Finance Report with 9 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Completion Date",
+          "description": "Live semantic model column from Finance Report. DataType=DateTime",
+          "dataType": "DateTime",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Month",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Audit Status",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Country",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Status Description",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Region",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Serious Failed",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Serious Failed Expenses",
+          "description": "Live semantic model column from Finance Report. DataType=Int64",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Function Summary",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "VTB ($) by channel",
+      "description": "Live semantic model table from Finance Report with 2 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Amount",
+          "description": "Live semantic model column from Finance Report. DataType=Decimal",
+          "dataType": "Decimal",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "VTB ($) by channel",
+          "description": "Live semantic model column from Finance Report. DataType=String",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    },
+    {
+      "name": "LocalDateTable_b9f97684-05ee-47b3-bc25-548fc636a0d4",
+      "description": "Live semantic model table from Finance Report with 7 columns.",
+      "isHidden": false,
+      "columns": [
+        {
+          "name": "Date",
+          "description": "Live semantic model column from Finance Report. DataType=DateTime",
+          "dataType": "DateTime",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Year",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "MonthNo",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Month",
+          "description": "Live semantic model column from Finance Report. DataType=String; Calculated=true",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "QuarterNo",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Quarter",
+          "description": "Live semantic model column from Finance Report. DataType=String; Calculated=true",
+          "dataType": "String",
+          "isHidden": false,
+          "formatString": ""
+        },
+        {
+          "name": "Day",
+          "description": "Live semantic model column from Finance Report. DataType=Int64; Calculated=true",
+          "dataType": "Int64",
+          "isHidden": false,
+          "formatString": ""
+        }
+      ],
+      "hierarchies": []
+    }
+  ],
+  "measures": [
+    {
+      "table": "Sales",
+      "name": "FVTB%",
+      "description": "",
+      "expression": "IF(SUM(Sales[Budget])>0,((Sum(Sales[Forecast])/Sum(Sales[Budget]))-1),0)",
+      "formatString": "0.00%;-0.00%;0.00%",
+      "displayFolder": "",
+      "isHidden": false
+    },
+    {
+      "table": "Sales",
+      "name": "FVTB$",
+      "description": "",
+      "expression": "Sum(Sales[Forecast])-Sum(Sales[Budget])",
+      "formatString": "",
+      "displayFolder": "",
+      "isHidden": false
+    }
+  ],
+  "relationships": [
+    {
+      "name": "dccd854c-4514-42c8-9ecc-90c3cff1c883",
+      "description": "",
+      "fromTable": "Travel&Entertainment",
+      "fromColumn": "Completion Date",
+      "toTable": "LocalDateTable_b9f97684-05ee-47b3-bc25-548fc636a0d4",
+      "toColumn": "Date",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "98caeffe-75e5-47bc-87a1-1ab21aa1ed54",
+      "description": "",
+      "fromTable": "Sales",
+      "fromColumn": "Country",
+      "toTable": "Country",
+      "toColumn": "Country",
+      "crossFilteringBehavior": "BothDirections",
+      "isActive": true
+    },
+    {
+      "name": "5496df35-6da6-4cd0-89c8-217e7cf6d38b",
+      "description": "",
+      "fromTable": "ConflictofInterest",
+      "fromColumn": "Country",
+      "toTable": "Country",
+      "toColumn": "Country",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "5a587f0a-b3cd-470b-9528-058387cf1fed",
+      "description": "",
+      "fromTable": "Travel&Entertainment",
+      "fromColumn": "Country",
+      "toTable": "Country",
+      "toColumn": "Country",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "d1e8b05b-2ccd-42a1-a574-2125ef5884a2",
+      "description": "",
+      "fromTable": "SiteSecurity",
+      "fromColumn": "Country",
+      "toTable": "Country",
+      "toColumn": "Country",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "40b4f8f2-69bc-4d64-9c61-7dd03748266b",
+      "description": "",
+      "fromTable": "OperatingExpenses",
+      "fromColumn": "Country",
+      "toTable": "Country",
+      "toColumn": "Country",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "55c40595-1e04-4a14-b24d-dacac893a376",
+      "description": "",
+      "fromTable": "ConflictofInterest",
+      "fromColumn": "Fiscal Year",
+      "toTable": "FP&A",
+      "toColumn": "Fiscal Year",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "11021585-7e47-435c-a5fb-24a1465be3bc",
+      "description": "",
+      "fromTable": "Sales",
+      "fromColumn": "Fiscal Year",
+      "toTable": "FP&A",
+      "toColumn": "Fiscal Year",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "1897e694-28ab-4817-b147-22cb9ac7bf2e",
+      "description": "",
+      "fromTable": "SiteSecurity",
+      "fromColumn": "FiscalYear",
+      "toTable": "FP&A",
+      "toColumn": "Fiscal Year",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "f8ac957e-2e29-42e2-b5d3-02b966e66ecc",
+      "description": "",
+      "fromTable": "FP&A",
+      "fromColumn": "Country",
+      "toTable": "Country",
+      "toColumn": "Country",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": false
+    }
+  ],
+  "roles": []
+}

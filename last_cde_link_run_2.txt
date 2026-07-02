@@ -1,0 +1,92 @@
+=== Existing CDCs: 25 ===
+
+=== Creating CDCs + CDE relationships ===
+
+-- GL Account Number -> Finance Report.account_id --
+  ok  CDC exists id=53e577c5-6d50-416c-b39c-dbd89bf8bcb7 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Fiscal Period -> dimension_date.fiscal_period --
+  ok  CDC exists id=780072ae-7b6b-47d2-86f2-7d19c3a5e7f9 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Reporting Currency -> fact_sale.currency_code --
+  ok  CDC exists id=bc15f41d-a0ce-4b5e-a9ff-c6125363a709 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Customer Master ID -> dimension_customer.customer_id --
+  ok  CDC exists id=b3a0f6f6-f7e7-4e23-a157-0bafe1ae66ec (skipping create)
+  ok  CDE -> CDC linked
+
+-- Email Address (PII) -> dimension_customer.email --
+  ok  CDC exists id=7c2bde0d-a786-4220-a8ae-7295d2605da3 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Customer Lifetime Value -> dimension_customer.ltv_score --
+  ok  CDC exists id=108d489e-2f8a-4dad-856d-26f75217d9bd (skipping create)
+  ok  CDE -> CDC linked
+
+-- Employee ID -> aggregate_sale_by_date_employee.employee_id --
+  ok  CDC exists id=b367024e-3e28-40ce-8b40-1cb88a2b3e8f (skipping create)
+
+-- Compensation Band -> aggregate_sale_by_date_employee.comp_band --
+  ok  CDC exists id=ffffd329-c5d3-4bfb-9f8d-844fcc734a0d (skipping create)
+
+-- Cost Center -> aggregate_sale_by_date_employee.cost_center --
+  ok  CDC exists id=488337fc-b69f-4064-a01a-286ff858c508 (skipping create)
+
+-- Equipment ID -> wwilakehouse-DirectLake.equipment_id --
+  ok  CDC exists id=21b314a9-7daf-4bc1-a432-972e44bdb023 (skipping create)
+
+-- Work Order Number -> wwilakehouse-DirectLake.work_order_id --
+  ok  CDC exists id=c6b9b133-e093-450f-bf88-be786d862cb6 (skipping create)
+
+-- Material Number -> wwilakehouse-DirectLake.material_id --
+  ok  CDC exists id=e81d85e3-3386-4d3f-ace4-9371803d6ee2 (skipping create)
+
+-- Asset Sensitivity Label -> Purview Hub.sensitivity --
+  ok  CDC exists id=d10060bf-caec-4ed7-8af1-01f80eaf0044 (skipping create)
+
+-- Data Quality Score -> exec_requests_history.dq_score --
+  ok  CDC exists id=b756783b-57bd-4bcd-b1df-52d3beff04cb (skipping create)
+
+-- Owner Email -> Purview Hub.owner_email --
+  ok  CDC exists id=1e4277ae-8fc6-4944-bcc0-c03ac7286ff1 (skipping create)
+
+-- Pipeline Conversion Rate -> fact_sale.pipeline_conversion_rate --
+  ok  CDC exists id=5848f49f-1c2d-4482-b6d6-faccf4791fad (skipping create)
+  ok  CDE -> CDC linked
+
+-- Discount Leakage -> fact_sale.discount_leakage --
+  ok  CDC exists id=e5dd9717-6e57-4d9f-be30-24ae57bf37fa (skipping create)
+  ok  CDE -> CDC linked
+
+-- Forecast Accuracy -> fact_sale.forecast_accuracy --
+  ok  CDC exists id=57e6f557-05d1-457d-869b-9ce94bc23158 (skipping create)
+  ok  CDE -> CDC linked
+
+-- Sell-out Volume -> fact_sale.sell_out_volume --
+  ok  CDC exists id=a411e47e-b738-4eb1-a740-74530b53d2de (skipping create)
+  ok  CDE -> CDC linked
+
+-- Data Freshness SLA -> exec_requests_history.data_freshness_sla --
+  FAIL CDC :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataColumn in business domain 7f5695d1-8e2e-44f1-9c08-5c1e2455cee7.","details":null,
+
+-- DQ Rule Pass Rate -> exec_requests_history.dq_rule_pass_rate --
+  FAIL CDC :: HTTP 403 {"error":{"code":"DataCatalogForbiddenError","message":"Don't have permission to change CriticalDataColumn in business domain 7f5695d1-8e2e-44f1-9c08-5c1e2455cee7.","details":null,
+
+-- KPI Top Opportunities -> exec_requests_history.kpi_top_opportunities --
+  ok  CDC exists id=0f1fa305-fea8-4b08-83d6-292843cf9e7d (skipping create)
+  ok  CDE -> CDC linked
+
+-- Sales -> exec_requests_history.sales --
+  ok  CDC exists id=b0ac2a80-9a36-4eee-9006-4168f45f5369 (skipping create)
+  ok  CDE -> CDC linked
+
+========== Summary ==========
+CDCs created:     21 / 23
+CDE->CDC links:   12
+Failures:         2
+
+Total CriticalDataColumns in catalog: 25
+Sample CDE 'Customer Master ID' has 1 CDC relationship(s)
